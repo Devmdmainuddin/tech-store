@@ -20,6 +20,7 @@ import monitors from '/monitors.jpg'
 import { BsCart } from "react-icons/bs";
 import Partnar from "../components/Partnar";
 import Blogs from "../components/Blogs";
+import Testimonials from "../components/Testimonials";
 
 const Home = () => {
     return (
@@ -2167,6 +2168,7 @@ const Home = () => {
             </div>
             <Partnar></Partnar>
             <Blogs></Blogs>
+            <Testimonials></Testimonials>
 
 
 

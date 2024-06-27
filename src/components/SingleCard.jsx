@@ -32,7 +32,15 @@ const SingleCard = () => {
                 background-color: #666666;
                 padding: 8px 16px;
                 border-radius: 100%;
+                border:1px solid #666666;
                 color: white;
+                transition:all 0.4s;
+              }
+                .swiper-button-next:hover,
+              .swiper-button-prev:hover{
+              border:1px solid #0156FF;
+              color:#0156FF;
+              background-color: #A2A6B0;
               }
             
           `,
