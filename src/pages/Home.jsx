@@ -14,11 +14,12 @@ import desktops from '/desktops.jpg'
 import monitor from '/monitor.jpg'
 import build from '/builds.jpg'
 import laptop from '/laptop.jpg'
-
+import zip from '/zip.png'
 import monitors from '/monitors.jpg'
 
 import { BsCart } from "react-icons/bs";
 import Partnar from "../components/Partnar";
+import Blogs from "../components/Blogs";
 
 const Home = () => {
     return (
@@ -30,6 +31,9 @@ const Home = () => {
             </div>
             <div className=" max-w-[1398px] mx-auto">
                 <SingleCard></SingleCard>
+            </div>
+            <div className="max-w-[1398px] mx-auto bg-[#F5F7FF] py-6 flex justify-center items-center gap-6">
+<img src={zip} alt="" /> <div className="w-[2px] h-3 bg-slate-500"></div> <h2>own it now, up to 6 months interest free learn more</h2>
             </div>
 
             <div className="max-w-[1398px] mx-auto  my-16 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6">
@@ -2162,6 +2166,7 @@ const Home = () => {
                 </div>
             </div>
             <Partnar></Partnar>
+            <Blogs></Blogs>
 
 
 
