@@ -5,7 +5,7 @@ import Vectorl from '/Vectorl.png'
 
 const Benefits = () => {
     return (
-        <section className="py-12 bg-white">
+        <section className="py-12 ">
          <div className="max-w-[1055px] mx-auto ">
                     <div className="flex justify-center items-center gap-x-[114px] -mb-12">
                         <div className="w-full md:w-[265px] p-4 mb-12 hover:shadow-xl">

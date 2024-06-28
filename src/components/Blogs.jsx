@@ -1,5 +1,32 @@
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const Blogs = () => {
     return (
         <div className="max-w-[1398px] mx-auto">
