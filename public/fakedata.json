@@ -1,0 +1,243 @@
+[
+    {
+      "id": 1,
+      "category": "mobile",
+      "brand": "TechBrand",
+      "model": "X200",
+      "title": "TechBrand X200 Smartphone",
+      "description": "A high-performance smartphone with a sleek design.",
+      "image": "https://example.com/images/techbrand_x200.jpg",
+      "price": 699.99,
+      "discount_price": 649.99,
+      "status": "available",
+      "rating": 4.5,
+      "reviews": [
+        "Excellent battery life and camera quality.",
+        "Great performance but the storage could be better."
+      ],
+      "specs": {
+        "screen_size": "6.5 inches",
+        "memory": "8 GB",
+        "storage": "128 GB",
+        "battery": "4000 mAh",
+        "camera": "12 MP"
+      }
+    },
+    {
+      "id": 2,
+      "category": "laptop",
+      "brand": "ComputePro",
+      "model": "UltraBook 15",
+      "title": "ComputePro UltraBook 15",
+      "description": "A powerful laptop with top-notch performance for all your needs.",
+      "image": "https://example.com/images/computepro_ultrabook15.jpg",
+      "price": 1299.99,
+      "discount_price": 1199.99,
+      "status": "available",
+      "rating": 4.7,
+      "reviews": [
+        "Outstanding performance and build quality.",
+        "Sleek design and long battery life."
+      ],
+      "specs": {
+        "screen_size": "15.6 inches",
+        "memory": "16 GB",
+        "storage": "512 GB SSD",
+        "processor": "Intel i7",
+        "battery": "10 hours"
+      }
+    },
+    {
+      "id": 3,
+      "category": "desktop",
+      "brand": "WorkStation",
+      "model": "DeskPro",
+      "title": "WorkStation DeskPro Desktop",
+      "description": "A reliable desktop for professional and home use.",
+      "image": "https://example.com/images/workstation_deskpro.jpg",
+      "price": 899.99,
+      "discount_price": 849.99,
+      "status": "out of stock",
+      "rating": 4.3,
+      "reviews": [
+        "Great value for the price.",
+        "Solid performance, but the design is a bit bulky."
+      ],
+      "specs": {
+        "memory": "16 GB",
+        "storage": "1 TB HDD",
+        "processor": "AMD Ryzen 5",
+        "graphics": "NVIDIA GTX 1660",
+        "operating_system": "Windows 10"
+      }
+    },
+    {
+      "id": 4,
+      "category": "monitor",
+      "brand": "ViewMaster",
+      "model": "UltraWide 27",
+      "title": "ViewMaster UltraWide 27 Monitor",
+      "description": "A stunning ultra-wide monitor with vibrant colors.",
+      "image": "https://example.com/images/viewmaster_ultrawide27.jpg",
+      "price": 299.99,
+      "discount_price": 279.99,
+      "status": "available",
+      "rating": 4.6,
+      "reviews": [
+        "Excellent color accuracy and wide viewing angles.",
+        "Perfect for multitasking and gaming."
+      ],
+      "specs": {
+        "screen_size": "27 inches",
+        "resolution": "2560x1440",
+        "refresh_rate": "144 Hz",
+        "panel_type": "IPS",
+        "ports": "HDMI, DisplayPort"
+      }
+    },
+    {
+      "id": 5,
+      "category": "mobile",
+      "brand": "PhoneX",
+      "model": "ProMax",
+      "title": "PhoneX ProMax Smartphone",
+      "description": "A premium smartphone with advanced features.",
+      "image": "https://example.com/images/phonex_promax.jpg",
+      "price": 999.99,
+      "discount_price": 949.99,
+      "status": "available",
+      "rating": 4.8,
+      "reviews": [
+        "Top-notch camera and display quality.",
+        "Fast performance with a premium feel."
+      ],
+      "specs": {
+        "screen_size": "6.7 inches",
+        "memory": "12 GB",
+        "storage": "256 GB",
+        "battery": "4500 mAh",
+        "camera": "48 MP"
+      }
+    },
+    {
+      "id": 6,
+      "category": "laptop",
+      "brand": "LapTopia",
+      "model": "Gaming 17",
+      "title": "LapTopia Gaming 17",
+      "description": "A high-performance gaming laptop with a large display.",
+      "image": "https://example.com/images/laptopia_gaming17.jpg",
+      "price": 1499.99,
+      "discount_price": 1399.99,
+      "status": "available",
+      "rating": 4.7,
+      "reviews": [
+        "Amazing graphics and performance for gaming.",
+        "Large screen and excellent cooling system."
+      ],
+      "specs": {
+        "screen_size": "17.3 inches",
+        "memory": "32 GB",
+        "storage": "1 TB SSD",
+        "processor": "Intel i9",
+        "battery": "8 hours"
+      }
+    },
+    {
+      "id": 7,
+      "category": "desktop",
+      "brand": "PowerPC",
+      "model": "GamerX",
+      "title": "PowerPC GamerX Desktop",
+      "description": "A powerful desktop for gaming enthusiasts.",
+      "image": "https://example.com/images/powerpc_gamerx.jpg",
+      "price": 1299.99,
+      "discount_price": 1249.99,
+      "status": "available",
+      "rating": 4.9,
+      "reviews": [
+        "Exceptional gaming performance.",
+        "High-end components with a sleek design."
+      ],
+      "specs": {
+        "memory": "32 GB",
+        "storage": "2 TB SSD",
+        "processor": "AMD Ryzen 7",
+        "graphics": "NVIDIA RTX 3070",
+        "operating_system": "Windows 11"
+      }
+    },
+    {
+      "id": 8,
+      "category": "monitor",
+      "brand": "ScreenMaster",
+      "model": "4K 32",
+      "title": "ScreenMaster 4K 32 Monitor",
+      "description": "A large 4K monitor for immersive viewing experiences.",
+      "image": "https://example.com/images/screenmaster_4k32.jpg",
+      "price": 499.99,
+      "discount_price": 459.99,
+      "status": "available",
+      "rating": 4.5,
+      "reviews": [
+        "Stunning 4K resolution and great color accuracy.",
+        "Perfect for both work and entertainment."
+      ],
+      "specs": {
+        "screen_size": "32 inches",
+        "resolution": "3840x2160",
+        "refresh_rate": "60 Hz",
+        "panel_type": "VA",
+        "ports": "HDMI, DisplayPort, USB-C"
+      }
+    },
+    {
+      "id": 9,
+      "category": "mobile",
+      "brand": "SmartPhone",
+      "model": "Elite",
+      "title": "SmartPhone Elite",
+      "description": "A feature-rich smartphone with a sleek design.",
+      "image": "https://example.com/images/smartphone_elite.jpg",
+      "price": 799.99,
+      "discount_price": 749.99,
+      "status": "available",
+      "rating": 4.4,
+      "reviews": [
+        "Good value for the features provided.",
+        "Sleek design and responsive interface."
+      ],
+      "specs": {
+        "screen_size": "6.3 inches",
+        "memory": "8 GB",
+        "storage": "128 GB",
+        "battery": "3800 mAh",
+        "camera": "16 MP"
+      }
+    },
+    {
+      "id": 10,
+      "category": "laptop",
+      "brand": "UltraTech",
+      "model": "SlimBook",
+      "title": "UltraTech SlimBook",
+      "description": "A slim and lightweight laptop for on-the-go productivity.",
+      "image": "https://example.com/images/ultratech_slimbook.jpg",
+      "price": 1099.99,
+      "discount_price": 999.99,
+      "status": "available",
+      "rating": 4.6,
+      "reviews": [
+        "Great portability and battery life.",
+        "Fast performance with a compact design."
+      ],
+      "specs": {
+        "screen_size": "13.3 inches",
+        "memory": "8 GB",
+        "storage": "256 GB SSD",
+        "processor": "Intel i5",
+        "battery": "12 hours"
+      }
+    }
+  ]
+  

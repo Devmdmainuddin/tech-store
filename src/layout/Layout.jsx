@@ -5,7 +5,7 @@ import Footer from "../components/shared/Footer";
 
 const Layout = () => {
     return (
-        <div>
+        <div >
         
             {/* header */}
             <Navbar/>

@@ -8,7 +8,7 @@ import { FaInstagramSquare } from 'react-icons/fa'
 const Footer = () => {
     return (
         <div className="bg-[#020203] text-white">
-            <div className="max-w-[1398px] mx-auto flex justify-between py-12">
+            <div className="max-w-[1398px] mx-auto flex justify-between py-12 px-6">
                 <div>
                     <h2 className=" text-white text-4xl font-medium">Sign Up To Our Newsletter.</h2>
                     <p className="mt-[9px]">Be the first to hear about the latest offers.</p>
@@ -16,11 +16,11 @@ const Footer = () => {
 
                 <div className="lg:flex mb-4">
                     <input className="py-3 px-6 xl:px-9 mb-2 lg:mb-0 xl:mb-0 xl:mr-2 w-full lg:w-auto bg-transparent placeholder-darkBlueGray-400 border-2 border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 rounded-md" type="email" placeholder="Enter you Email" />
-                    <button className="inline-block py-3 px-10  text-[14px]  text-white font-semibold text-center bg-blue-600   rounded-full" href="#">Let's go</button>
+                    <button className="inline-block py-3 px-10  text-[14px]  text-white font-semibold text-center bg-blue-600   rounded-full" href="#">Subscribe</button>
                 </div>
 
             </div>
-            <div className="max-w-[1398px] mx-auto flex flex-wrap  mb-9 ">
+            <div className="max-w-[1398px] mx-auto flex flex-wrap  mb-9 px-6">
                 <div className="w-full md:w-1/2 lg:w-1/5 p-8">
                     <h3 className="mb-6 text-gray-300 font-medium">Information</h3>
                     <ul>
@@ -77,8 +77,8 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <div className='max-w-[1398px] mx-auto h-[1px] bg-slate-400 '></div>
-            <div className="max-w-[1398px] mx-auto flex justify-between py-12">
+            <div className='max-w-[1398px] mx-auto h-[1px] bg-slate-400 px-6 '></div>
+            <div className="max-w-[1398px] mx-auto flex justify-between py-12 px-6">
                 <div className="flex gap-2">
                     <FaSquareFacebook />
                     <FaInstagramSquare />
