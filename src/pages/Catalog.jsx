@@ -20,6 +20,9 @@ import { MdDone } from 'react-icons/md';
 import productImg from '/product.jpg'
 import Benefits from '../components/Benefits'
 import SingleCards from '../components/SingleCards';
+import SpecificationSlider from '../components/slider/SpecificationSlider';
+import Featues from '../components/Featues';
+import DetailsPageImage from '../components/DetailsPageImage';
 const Catalog = () => {
     const [products,setProducts]=useState([])
     const [itemsperpage, setitemsperpage] = useState(6)
@@ -365,6 +368,9 @@ const Catalog = () => {
 
 
             </div>
+            
+            <SpecificationSlider></SpecificationSlider>
+            <Featues></Featues>
             <div className='bg-slate-100'>
                     <Benefits></Benefits>
                 </div>
