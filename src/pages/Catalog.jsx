@@ -24,6 +24,7 @@ import SpecificationSlider from '../components/slider/SpecificationSlider';
 import Featues from '../components/Featues';
 import DetailsPageImage from '../components/DetailsPageImage';
 import Contact from '../components/Contact';
+import Login from '../components/Login';
 const Catalog = () => {
     const [products, setProducts] = useState([])
     const [itemsperpage, setitemsperpage] = useState(6)
@@ -369,7 +370,7 @@ const Catalog = () => {
 
 
             </div>
-
+<Login></Login>
 <Contact></Contact>
 
 

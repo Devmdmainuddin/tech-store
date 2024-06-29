@@ -23,10 +23,11 @@ const Contact = () => {
 
 
             </ul>
+            <h2 className="text-3xl font-semibold">Contact Us</h2>
             <div className="flex justify-between gap-16">
                 <div>
 
-                    <h2 className="text-3xl font-semibold">Contact Us</h2>
+                    
                     <p className="mt-3 font-light max-w-[718px]">We love hearing from you, our Shop customers.
                         Please contact us and we will make sure to get back to you as soon as we possibly can.</p>
                     <form action="" className=" mt-6 justify-center items-center">
@@ -52,6 +53,8 @@ const Contact = () => {
 
                             <textarea name="message" id="" className="p-2 border mt-3 h-[236px] resize-none"></textarea >
                         </div>
+
+                        <button className="mt-4 inline-block py-3 px-10  text-[14px]  text-white font-semibold text-center bg-blue-600   rounded-full" href="#">Submit</button>
 
 
 
