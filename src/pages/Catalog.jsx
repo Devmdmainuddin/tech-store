@@ -23,6 +23,7 @@ import SingleCards from '../components/SingleCards';
 import SpecificationSlider from '../components/slider/SpecificationSlider';
 import Featues from '../components/Featues';
 import DetailsPageImage from '../components/DetailsPageImage';
+import Contact from '../components/Contact';
 const Catalog = () => {
     const [products, setProducts] = useState([])
     const [itemsperpage, setitemsperpage] = useState(6)
@@ -368,8 +369,13 @@ const Catalog = () => {
 
 
             </div>
-            <div className=' flex justify-between items-start'>
-                <div role="tablist" className=" tabs-bordered w-[600px]">
+
+<Contact></Contact>
+
+
+
+            <div className=' flex justify-between items-start max-w-[1398px] mx-auto'>
+                <div role="tablist" className=" tabs-bordered 'w-1/2 bg-slate-200">
                     <input
                         type="radio"
                         name="my_tabs_1"
@@ -380,36 +386,61 @@ const Catalog = () => {
 
                         <ul className="flex flex-wrap items-center mb-10 xl:mb-0">
                             <li className="mr-6">
-                                <Link className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-500" href="#">
+                                <Link className="flex items-center text-sm font-medium transition-all duration-300  hover:text-gray-500" href="#">
                                     <span>Home</span>
                                     <IoIosArrowForward />
                                 </Link>
                             </li>
                             <li className="mr-6">
-                                <Link className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-500" href="#">
+                                <Link className="flex items-center text-sm font-medium transition-all duration-300  hover:text-gray-500" href="#">
                                     <span>Everyday Use Notebooks</span>
                                     <IoIosArrowForward />
                                 </Link>
                             </li>
                             <li className="mr-6">
-                                <Link className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-500" href="#">
+                                <Link className="flex items-center text-sm font-medium transition-all duration-300  hover:text-gray-500" href="#">
                                     <span>MSI Prestige Series</span>
                                     <IoIosArrowForward />
                                 </Link>
                             </li>
 
-                            <li><a className="text-sm font-medium text-indigo-500 hover:text-indigo-600" href="#">MSI WS Series</a></li>
+                            <li><a className="text-sm font-medium text-[#A3A3A3] transition-all duration-300  hover:text-gray-700" href="#">MSI WS Series</a></li>
                         </ul>
                         <div>
                             <h2 className='text-3xl font-medium mt-6'>MSI MPG Trident 3</h2>
                             <p className='text-[#0156FF] text-[12px] font-normal mt-6'>Be the first to review this product</p>
-                        
-                        <p className='text-xl font-light mt-6'>MSI MPG Trident 3 10SC-005AU Intel i7 10700F, 2060 SUPER, 16GB RAM, 512GB SSD, 2TB HDD, Windows 10 Home, Gaming Keyboard and Mouse 3 Years Warranty Gaming Desktop</p>
-                        
-                        
+                            {/* about product */}
+                            {/* <p className='text-xl font-light mt-6'>MSI MPG Trident 3 10SC-005AU Intel i7 10700F, 2060 SUPER, 16GB RAM, 512GB SSD, 2TB HDD, Windows 10 Home, Gaming Keyboard and Mouse 3 Years Warranty Gaming Desktop</p> */}
+
+                                {/* details */}
+                            {/* <ul className='list-disc list-inside mt-6 text-sm font-light'>
+                                <li> Intel Core i7-10700F</li>
+                                <li>  Intel H410</li>
+                                <li>WHITE</li>
+                                <li>NVIDIA MSI GeForce RTX 2060 SUPER 8GB AERO ITX GDDR6</li>
+                                <li>SO-DIMM 16GB (16GB x 1) DDR4 2666MHz</li>
+                                <li>2 total slots (64GB Max)</li>
+                                <li>512GB (1 x 512GB) M.2 NVMe PCIe GEN3x4 SSD 2TB (2.5) 5400RPM</li>
+                                <li>Gaming Keyboard GK30 + Gaming Mouse GM11</li>
+                                <li>3.5 HDD (0/0), 2.5 HDD/SSD(1/0), M.2 (1/0)</li>
+                                <li>Intel WGI219Vethernet (10/100/1000M)</li>
+                                <li>AX200 (WIFI 6)+BT5.1</li>
+                                <li>PSU 330W</li>
+                            </ul> */}
+                            {/* specs */}
+                            <div className=' border border-[#b1b2b4]'>
+                                <div className='flex justify-evenly p-4 bg-white'><p>CPU</p><p>N/A</p></div>
+                                <div className='flex justify-evenly p-4 bg-slate-50'><p>Featured</p><p>N/A</p></div>
+                                <div className='flex justify-evenly p-4 bg-white'><p>I/O Ports</p><p>N/A</p></div>
+                            </div>
+
+                        </div>
+                        <div className='flex justify-between mt-8'>
+                            <p className='text-[12px] font-semibold'>Have a Question? <Link className='text-[#0156FF]'>Contact Us</Link> </p>
+                            <p className='text-[12px] font-light'>SKU D5515AI</p>
                         </div>
 
-
+                        <button className='text-sm font-bold mt-[166px]'>+ More information</button>
 
                     </div>
 
@@ -430,7 +461,10 @@ const Catalog = () => {
                         aria-label="Specs" />
                     <div role="tabpanel" className="tab-content p-10">Tab content 3</div>
                 </div>
+                <div className='w-1/2'>
                 <DetailsPageImage></DetailsPageImage>
+                </div>
+                
             </div>
 
             <SpecificationSlider></SpecificationSlider>

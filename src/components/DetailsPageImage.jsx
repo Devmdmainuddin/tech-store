@@ -20,7 +20,7 @@ const DetailsPageImage = () => {
                     delay: 5000,
                     disableOnInteraction: false,
                 }}
-                modules={[Pagination, Autoplay]} className="mySwiper max-w-md border">
+                modules={[Pagination, Autoplay]} className="mySwiper  border">
 
                 <SwiperSlide>
                     <div className="group  p-6">

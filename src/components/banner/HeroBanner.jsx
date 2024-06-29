@@ -66,10 +66,7 @@ console.log('banner',banner)
 
 
             </Swiper>
-            <div id="slide1" className={`h-[328px] rounded-xl carousel-item relative w-full bg-[url('${banner}')] bg-cover bg-center`}>
-                        {/* <img  src="https://i.ibb.co/3TttPjT/pexels-dom-j-7304-227405.jpg" className="w-full h-[500px]  object-cover" /> */}
-                        {/* <p className='w-1/2 mx-auto'>Every year, millions of students worldwide apply for scholarships. Whether these scholarship opportunities are for private education tuition or to cover the cost of college education</p> */}
-                    </div>
+         
         </>
     );
 };
