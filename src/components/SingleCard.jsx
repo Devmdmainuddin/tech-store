@@ -77,7 +77,7 @@ const SingleCard = () => {
                                 <div className='relative overflow-hidden'>
                                     <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={product} alt="" />
                                     <div className='absolute top-4 -right-10 group-hover:right-0 transition-all duration-500 opacity-0 invisible group-hover:opacity-100  group-hover:visible'>
-                                        <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full' />
+                                        <FaRegHeart className='p-1 border border-[#0bdfe2] text-3xl text-[#A2A6B0] rounded-full' />
                                         <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1' />
                                     </div>
 
@@ -103,7 +103,7 @@ const SingleCard = () => {
                                         <span className=" text-lg font-semibold">${products.discount_price}</span>
                                     </div>
                                     <div className='relative overflow-hidden bottom-8 left-0 right-0  opacity-0 transition-all duration-500 invisible   group-hover:bottom-0 group-hover:opacity-100  group-hover:visible'>
-                                        <Link className=" rounded-full border-2 border-[#0156FF] text-[#0156FF] flex gap-2 items-center justify-center py-2"><BsCart /> add To Cart</Link>
+                                        <Link to='/catalog' className=" rounded-full border-2 border-[#0156FF] text-[#0156FF] flex gap-2 items-center justify-center py-2"><BsCart /> add To Cart</Link>
                                     </div>
 
                                 </div>

@@ -3,7 +3,7 @@ import banner from '/banner.jpg'
 import bannerl from '/banner-2.jpg'
 import { IoIosArrowForward, IoIosArrowUp } from 'react-icons/io';
 import { Link } from 'react-router-dom';
-import { BsCart} from 'react-icons/bs';
+import { BsCart } from 'react-icons/bs';
 import { useEffect, useState } from 'react';
 import { CgMenuGridR } from 'react-icons/cg';
 import { BiMenuAltLeft } from 'react-icons/bi';
@@ -24,7 +24,7 @@ import SpecificationSlider from '../components/slider/SpecificationSlider';
 import Featues from '../components/Featues';
 import DetailsPageImage from '../components/DetailsPageImage';
 const Catalog = () => {
-    const [products,setProducts]=useState([])
+    const [products, setProducts] = useState([])
     const [itemsperpage, setitemsperpage] = useState(6)
     const [counts, setCounts] = useState(0)
     const numberofPage = Math.ceil(counts / itemsperpage);
@@ -32,12 +32,12 @@ const Catalog = () => {
     const pages = [...Array(numberofPage).keys()]
 
 
-    useEffect(()=>{
+    useEffect(() => {
         fetch('fakedata.json')
-        .then(res => res.json())
-        .then(data => setProducts(data))
-    
-    },[])
+            .then(res => res.json())
+            .then(data => setProducts(data))
+
+    }, [])
     const handlepre = () => {
         if (currentPage > 0) {
             setcurrentPage(currentPage - 1)
@@ -285,7 +285,7 @@ const Catalog = () => {
                     {/*  main  */}
                     <div className="w-full sm:w-1/2 lg:w-8/12 xl:w-9/12 sm:pl-7">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-                            {products.map((product, ) => <>
+                            {products.map((product,) => <>
                                 <div className="">
                                     <div className="block p-px group ">
                                         <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
@@ -332,48 +332,112 @@ const Catalog = () => {
 
                         </div>
                         <ul className="flex justify-center items-center ">
-                        <li onClick={handlepre}>
-                            <span className="p-1 flex rounded transition duration-150 ease-in-out text-base leading-tight font-bold text-gray-500 hover:text-indigo-700 focus:outline-none mr-1 sm:mr-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" />
-                                    <polyline points="15 6 9 12 15 18" />
-                                </svg>
-                            </span>
-                        </li>
-                        {
-                            pages.map(page => <button onClick={() => setcurrentPage(page)} key={page} className={currentPage === page ? "bg-orange-300 p-3" : 'mx-6 p-3 border-2'}>{page}</button>)
-                        }
-                        {/* <li>
+                            <li onClick={handlepre}>
+                                <span className="p-1 flex rounded transition duration-150 ease-in-out text-base leading-tight font-bold text-gray-500 hover:text-indigo-700 focus:outline-none mr-1 sm:mr-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" />
+                                        <polyline points="15 6 9 12 15 18" />
+                                    </svg>
+                                </span>
+                            </li>
+                            {
+                                pages.map(page => <button onClick={() => setcurrentPage(page)} key={page} className={currentPage === page ? "bg-orange-300 p-3" : 'mx-6 p-3 border-2'}>{page}</button>)
+                            }
+                            {/* <li>
                             <span className="flex text-indigo-700 hover:bg-indigo-600 hover:text-white text-base leading-tight font-bold cursor-pointer shadow transition duration-150 ease-in-out mx-2 sm:mx-4 rounded px-3 py-2 focus:outline-none">1</span>
                         </li> */}
 
-                        <li onClick={handlenext}>
-                            <span className="flex rounded transition duration-150 ease-in-out text-base leading-tight font-bold text-gray-500 hover:text-indigo-700 p-1 focus:outline-none ml-1 sm:ml-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" />
-                                    <polyline points="9 6 15 12 9 18" />
-                                </svg>
-                            </span>
-                        </li>
-                    </ul>
+                            <li onClick={handlenext}>
+                                <span className="flex rounded transition duration-150 ease-in-out text-base leading-tight font-bold text-gray-500 hover:text-indigo-700 p-1 focus:outline-none ml-1 sm:ml-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" />
+                                        <polyline points="9 6 15 12 9 18" />
+                                    </svg>
+                                </span>
+                            </li>
+                        </ul>
 
 
-                    <SingleCards></SingleCards>
+                        <SingleCards></SingleCards>
 
                     </div>
                 </div>
 
 
-               
+
 
 
             </div>
-            
+            <div className=' flex justify-between items-start'>
+                <div role="tablist" className=" tabs-bordered w-[600px]">
+                    <input
+                        type="radio"
+                        name="my_tabs_1"
+                        role="tab"
+                        className="tab"
+                        aria-label="About Product" />
+                    <div role="tabpanel" className="tab-content p-6">
+
+                        <ul className="flex flex-wrap items-center mb-10 xl:mb-0">
+                            <li className="mr-6">
+                                <Link className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-500" href="#">
+                                    <span>Home</span>
+                                    <IoIosArrowForward />
+                                </Link>
+                            </li>
+                            <li className="mr-6">
+                                <Link className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-500" href="#">
+                                    <span>Everyday Use Notebooks</span>
+                                    <IoIosArrowForward />
+                                </Link>
+                            </li>
+                            <li className="mr-6">
+                                <Link className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-500" href="#">
+                                    <span>MSI Prestige Series</span>
+                                    <IoIosArrowForward />
+                                </Link>
+                            </li>
+
+                            <li><a className="text-sm font-medium text-indigo-500 hover:text-indigo-600" href="#">MSI WS Series</a></li>
+                        </ul>
+                        <div>
+                            <h2 className='text-3xl font-medium mt-6'>MSI MPG Trident 3</h2>
+                            <p className='text-[#0156FF] text-[12px] font-normal mt-6'>Be the first to review this product</p>
+                        
+                        <p className='text-xl font-light mt-6'>MSI MPG Trident 3 10SC-005AU Intel i7 10700F, 2060 SUPER, 16GB RAM, 512GB SSD, 2TB HDD, Windows 10 Home, Gaming Keyboard and Mouse 3 Years Warranty Gaming Desktop</p>
+                        
+                        
+                        </div>
+
+
+
+                    </div>
+
+                    <input
+                        type="radio"
+                        name="my_tabs_1"
+                        role="tab"
+                        className="tab"
+                        aria-label="Details"
+                        defaultChecked />
+                    <div role="tabpanel" className="tab-content p-10">Tab content 2</div>
+
+                    <input
+                        type="radio"
+                        name="my_tabs_1"
+                        role="tab"
+                        className="tab"
+                        aria-label="Specs" />
+                    <div role="tabpanel" className="tab-content p-10">Tab content 3</div>
+                </div>
+                <DetailsPageImage></DetailsPageImage>
+            </div>
+
             <SpecificationSlider></SpecificationSlider>
             <Featues></Featues>
             <div className='bg-slate-100'>
-                    <Benefits></Benefits>
-                </div>
+                <Benefits></Benefits>
+            </div>
         </section>
     );
 };
