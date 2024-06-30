@@ -21,7 +21,7 @@ const Navbar = () => {
                     <li><Link>Desktop PCs</Link></li>
                     <li><Link>Networking Devices</Link></li>
                     <li><Link>Printers & Scanners</Link></li>
-                    <li><Link>All Other Products</Link></li>
+                    <li><Link to='/all-products'>All Other Products</Link></li>
                     <li><Link>Repairs</Link></li>
                     <li><Link className="py-2 px-6 rounded-full border-2 border-[#0156FF] text-[#0156FF]">Our Deals</Link></li>
                 </ul>

@@ -163,6 +163,38 @@ const Login = () => {
                             <IoIosArrowUp />
                         </summary>
                         <p className="text-sm font-normal text-[#666666] mt-3 max-w-[287px]">Enter your destination to get a shipping estimate.</p>
+
+                        <div className="flex flex-col ">
+                            <label htmlFor="discount" className="text-[13px] font-semibold mt-3">Country</label>
+
+                            <select name="" id="" className="py-3 px-8 outline-none border mt-3">
+                                <option value="Australia">Australia</option>
+                                <option value="bangladesh">bangladesh</option>
+                                <option value="india">india</option>
+                            </select>
+                        </div>
+                       
+                        <div className="flex flex-col ">
+                            <label htmlFor="discount" className="text-[13px] font-semibold mt-3">State/Province</label>
+                            <input type="text" name="discount" placeholder="Enter State/Province" className="py-3 px-8 outline-none border mt-3" />
+
+                        </div>
+                        <div className="flex flex-col ">
+                            <label htmlFor="discount" className="text-[13px] font-semibold mt-3">Zip/Postal Code</label>
+                            <input type="text" name="discount" placeholder="Enter Zip/Postal Code" className="py-3 px-8 outline-none border mt-3" />
+
+                        </div>
+                        <h2 className="text-[13px] font-semibold mt-3">Standard Rate</h2>
+                        <div>
+                            <input type="radio" id="Standard" name="drone" value="Standard" className="mt-3"/>
+                            <label htmlFor="Standard" className="ml-2">Price may vary depending on the item/destination. Shop Staff will contact you. $21.00</label>
+                        </div>
+                        <h2 className="text-[13px] font-semibold mt-3">Pickup from store</h2>
+                        <div>
+                            <input type="radio" id="store" name="drone" value="store"className="mt-3" />
+                            <label htmlFor="store" className="ml-2">1234 Street Adress City Address, 1234 $0.00</label>
+                        </div>
+
                     </details>
                     <details className="group [&_summary::-webkit-details-marker]:hidden" open>
                         <summary
@@ -171,11 +203,16 @@ const Login = () => {
                             <h3 className="mt-[18px] text-[18px] font-normal ">Apply Discount Code</h3>
                             <IoIosArrowUp />
                         </summary>
-                       
+                        <div className="flex flex-col ">
+                            <label htmlFor="discount" className="text-[13px] font-semibold mt-3">Enter discount code</label>
+                            <input type="text" name="discount" placeholder="Enter Discount code" className="py-3 px-8 outline-none border mt-3" />
+                            <button className="W-full mt-4 block py-3 px-10  text-[14px]  text-[#0156FF] font-semibold text-center border-[#0156FF] border    rounded-full" href="#">Check out with</button>
+                        </div>
+
                     </details>
 
 
-                    
+
                     <div className="divider"></div>
                     <div className="flex justify-between text-[13px] font-semibold">
                         <p>Subtotal</p>

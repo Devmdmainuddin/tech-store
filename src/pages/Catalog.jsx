@@ -359,8 +359,10 @@ const Catalog = () => {
                             </li>
                         </ul>
 
+                        <div>
+                            <SingleCards></SingleCards>
+                        </div>
 
-                        <SingleCards></SingleCards>
 
                     </div>
                 </div>
@@ -370,8 +372,8 @@ const Catalog = () => {
 
 
             </div>
-<Login></Login>
-<Contact></Contact>
+            <Login></Login>
+            <Contact></Contact>
 
 
 
@@ -413,7 +415,7 @@ const Catalog = () => {
                             {/* about product */}
                             {/* <p className='text-xl font-light mt-6'>MSI MPG Trident 3 10SC-005AU Intel i7 10700F, 2060 SUPER, 16GB RAM, 512GB SSD, 2TB HDD, Windows 10 Home, Gaming Keyboard and Mouse 3 Years Warranty Gaming Desktop</p> */}
 
-                                {/* details */}
+                            {/* details */}
                             {/* <ul className='list-disc list-inside mt-6 text-sm font-light'>
                                 <li> Intel Core i7-10700F</li>
                                 <li>  Intel H410</li>
@@ -463,9 +465,9 @@ const Catalog = () => {
                     <div role="tabpanel" className="tab-content p-10">Tab content 3</div>
                 </div>
                 <div className='w-1/2'>
-                <DetailsPageImage></DetailsPageImage>
+                    <DetailsPageImage></DetailsPageImage>
                 </div>
-                
+
             </div>
 
             <SpecificationSlider></SpecificationSlider>

@@ -103,7 +103,7 @@ const SingleCard = () => {
                                         <span className=" text-lg font-semibold">${products.discount_price}</span>
                                     </div>
                                     <div className='relative overflow-hidden bottom-8 left-0 right-0  opacity-0 transition-all duration-500 invisible   group-hover:bottom-0 group-hover:opacity-100  group-hover:visible'>
-                                        <Link to='/catalog' className=" rounded-full border-2 border-[#0156FF] text-[#0156FF] flex gap-2 items-center justify-center py-2"><BsCart /> add To Cart</Link>
+                                        <Link to='/all-products' className=" rounded-full border-2 border-[#0156FF] text-[#0156FF] flex gap-2 items-center justify-center py-2"><BsCart /> add To Cart</Link>
                                     </div>
 
                                 </div>
