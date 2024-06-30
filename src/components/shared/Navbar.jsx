@@ -53,7 +53,7 @@ const Navbar = () => {
                                     </button>
                                     <h2 className='text-center text-xl font-semibold '>My Cart</h2>
                                     <p className='text-[#A2A6B0] text-sm font-normal text-center'> <span> 2 </span> item in cart</p>
-                                    <Link className=" rounded-full border-2 border-[#0156FF] text-[#0156FF] flex gap-2 items-center justify-center py-2 mt-6 px-2">View or Edit Your Cart</Link>
+                                    <Link to='/ShoppingCart' className=" rounded-full border-2 border-[#0156FF] text-[#0156FF] flex gap-2 items-center justify-center py-2 mt-6 px-2">View or Edit Your Cart</Link>
                                     <div className='divider'></div>
                                     <div className="mt-4 space-y-6">
                                         <ul className="space-y-4">

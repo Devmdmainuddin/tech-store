@@ -6,11 +6,11 @@ import {
 } from "react-router-dom";
 import Layout from './layout/Layout';
 import Home from './pages/Home';
-
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
 import ProductsDetails from './pages/ProductsDetails';
 import Products from './pages/Products';
+import ShoppingCart from './pages/ShoppingCart';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/products-Details",
         element: <ProductsDetails/>,
+      },
+      {
+        path: "/ShoppingCart",
+        element:<ShoppingCart></ShoppingCart>,
       },
 
       {

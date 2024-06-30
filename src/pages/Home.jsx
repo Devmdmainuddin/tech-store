@@ -30,7 +30,7 @@ const Home = () => {
 
             <div className="flex justify-between items-center mt-[33px] max-w-[1398px] mx-auto px-6">
                 <h2 className="text-[22px] font-semibold">New Products</h2>
-                <Link className="text-[#0156FF] text-[13px] font-normal">See All New Products</Link>
+                <Link Link to='/all-products' className="text-[#0156FF] text-[13px] font-normal">See All New Products</Link>
             </div>
             <div className=" max-w-[1398px] mx-auto px-6">
                 <SingleCard></SingleCard>
@@ -41,7 +41,7 @@ const Home = () => {
 
             <div className="max-w-[1398px] mx-auto px-6  my-16 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6">
                 <SingleBanner image={builds} categoreys='Custome Builds'></SingleBanner>
-                <div className="">
+                <Link to='/products-Details' className="">
                     <div className="block p-px group ">
                         <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
                             <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />in stock</span>
@@ -81,8 +81,8 @@ const Home = () => {
                         </div>
                     </div>
 
-                </div>
-                <div className="">
+                </Link>
+                <Link to='/products-Details' className="">
                     <div className="block p-px group ">
                         <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
                             <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />in stock</span>
@@ -122,8 +122,8 @@ const Home = () => {
                         </div>
                     </div>
 
-                </div>
-                <div className="">
+                </Link>
+                <Link to='/products-Details' className="">
                     <div className="block p-px group ">
                         <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
                             <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />in stock</span>
@@ -163,8 +163,8 @@ const Home = () => {
                         </div>
                     </div>
 
-                </div>
-                <div className="">
+                </Link>
+                <Link to='/products-Details' className="">
                     <div className="block p-px group ">
                         <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
                             <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />in stock</span>
@@ -204,8 +204,8 @@ const Home = () => {
                         </div>
                     </div>
 
-                </div>
-                <div className="">
+                </Link>
+                <Link to='/products-Details' className="">
                     <div className="block p-px group ">
                         <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
                             <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />in stock</span>
@@ -245,7 +245,8 @@ const Home = () => {
                         </div>
                     </div>
 
-                </div>
+                </Link>
+               
             </div>
             <Tabs className='max-w-[1398px] mx-auto px-6'>
                 <TabList>
@@ -259,7 +260,7 @@ const Home = () => {
                     <div className="my-16 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6">
                         <SingleBanner image={laptops} categoreys='MSI Laptops'></SingleBanner>
 
-                        <div className="">
+                        <Link to='/products-Details' className="">
                             <div className="block p-px group ">
                                 <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
                                     <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />in stock</span>
@@ -299,8 +300,8 @@ const Home = () => {
                                 </div>
                             </div>
 
-                        </div>
-                        <div className="">
+                        </Link>
+                        <Link to='/products-Details' className="">
                             <div className="block p-px group ">
                                 <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
                                     <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />in stock</span>
@@ -340,8 +341,8 @@ const Home = () => {
                                 </div>
                             </div>
 
-                        </div>
-                        <div className="">
+                        </Link>
+                        <Link to='/products-Details' className="">
                             <div className="block p-px group ">
                                 <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
                                     <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />in stock</span>
@@ -381,8 +382,8 @@ const Home = () => {
                                 </div>
                             </div>
 
-                        </div>
-                        <div className="">
+                        </Link>
+                        <Link to='/products-Details' className="">
                             <div className="block p-px group ">
                                 <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
                                     <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />in stock</span>
@@ -422,8 +423,8 @@ const Home = () => {
                                 </div>
                             </div>
 
-                        </div>
-                        <div className="">
+                        </Link>
+                        <Link to='/products-Details' className="">
                             <div className="block p-px group ">
                                 <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
                                     <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />in stock</span>
@@ -463,14 +464,15 @@ const Home = () => {
                                 </div>
                             </div>
 
-                        </div>
+                        </Link>
+                      
                     </div>
                 </TabPanel>
                 <TabPanel>
                     <div className="my-16 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6">
                         <SingleBanner image={desktops} categoreys='Desktops'></SingleBanner>
 
-                        <div className="">
+                        <Link to='/products-Details' className="">
                             <div className="block p-px group ">
                                 <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
                                     <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />in stock</span>
@@ -510,8 +512,8 @@ const Home = () => {
                                 </div>
                             </div>
 
-                        </div>
-                        <div className="">
+                        </Link>
+                        <Link to='/products-Details' className="">
                             <div className="block p-px group ">
                                 <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
                                     <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />in stock</span>
@@ -551,8 +553,8 @@ const Home = () => {
                                 </div>
                             </div>
 
-                        </div>
-                        <div className="">
+                        </Link>
+                        <Link to='/products-Details' className="">
                             <div className="block p-px group ">
                                 <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
                                     <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />in stock</span>
@@ -592,8 +594,8 @@ const Home = () => {
                                 </div>
                             </div>
 
-                        </div>
-                        <div className="">
+                        </Link>
+                        <Link to='/products-Details' className="">
                             <div className="block p-px group ">
                                 <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
                                     <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />in stock</span>
@@ -633,8 +635,8 @@ const Home = () => {
                                 </div>
                             </div>
 
-                        </div>
-                        <div className="">
+                        </Link>
+                        <Link to='/products-Details' className="">
                             <div className="block p-px group ">
                                 <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
                                     <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />in stock</span>
@@ -674,7 +676,8 @@ const Home = () => {
                                 </div>
                             </div>
 
-                        </div>
+                        </Link>
+                    
                     </div>
                 </TabPanel>
                 <TabPanel>
@@ -1101,7 +1104,7 @@ const Home = () => {
                 </TabPanel>
 
             </Tabs>
-
+            {/* tabs products */}
             <div>
                 <Tabs className='max-w-[1398px] mx-auto px-6'>
                     <TabList>
@@ -1959,7 +1962,7 @@ const Home = () => {
 
                 </Tabs>
             </div>
-
+            {/* SingleBanner */}
             <div className="max-w-[1398px] px-6 mx-auto my-16 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6">
                 <SingleBanner image={monitor} categoreys='Gaming Monitors'></SingleBanner>
                 <div className="">
@@ -2169,19 +2172,19 @@ const Home = () => {
                 </div>
             </div>
             <div className="px-6">
-            <Partnar></Partnar>
+                <Partnar></Partnar>
             </div>
             <div className="px-6">
-            <Blogs></Blogs>
+                <Blogs></Blogs>
             </div>
             <div className="px-6 max-w-[1398px] mx-auto">
-            <Testimonials></Testimonials>
+                <Testimonials></Testimonials>
             </div>
             <div>
                 <Benefits></Benefits>
             </div>
-            
-           
+
+
 
 
 
