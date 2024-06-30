@@ -7,8 +7,9 @@ import avatarImg from '../../assets/user-profile.png'
 import logo from '/logo.png'
 import { GrEdit } from "react-icons/gr";
 import { IoMdClose } from "react-icons/io";
-
+import useAuth from '../../hooks/useAuth';
 const Navbar = () => {
+    const { user, logOut } = useAuth()
     const [isOpen, setIsOpen] = useState(false)
     const [cartOpen, setCartOpen] = useState(false)
     const [usemenuOpen, setusemenuOpen] = useState(false)
@@ -146,22 +147,51 @@ const Navbar = () => {
                         )
                     }
 
+
                     <img
                         onClick={() => setusemenuOpen(!usemenuOpen)}
                         className='rounded-full'
                         referrerPolicy='no-referrer'
-                        src={avatarImg}
+                        src={user && user.photoURL ? user.photoURL : avatarImg}
                         alt='profile'
                         height='36'
                         width='36'
                     />
                     {
                         usemenuOpen && (
-                            <div
-                                className='absolute z-50 top-full right-0 px-4 py-3 bg-neutral-100 hover:bg-neutral-200 transition font-semibold cursor-pointer'
-                            >
-                                Logout
+                            <div className="absolute z-50 top-full right-12">
+                                {user ? (
+                                    <>
+
+                                        <div
+
+                                            className='px-4 py-3 hover:bg-neutral-100 transition font-semibold cursor-pointer'
+                                        >
+                                            Logout
+                                        </div>
+                                    </>
+                                ) : (
+                                    <>
+                                        <div className="flex flex-col gap-4 p-9 bg-slate-100">
+                                            <Link
+                                                to='/login'
+                                                className='px-4 py-3 bg-neutral-300 transition font-semibold'
+                                            >
+                                                Login
+                                            </Link>
+                                            <Link
+                                                to='/signup'
+                                                className='px-4 py-3 bg-neutral-300 transition font-semibold'
+                                            >
+                                                Sign Up
+                                            </Link>
+                                        </div>
+
+                                    </>
+                                )}
                             </div>
+
+
                         )
                     }
                 </div>

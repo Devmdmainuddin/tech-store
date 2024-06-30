@@ -1,3 +1,4 @@
+
 import { FaArrowLeft, FaRegHeart, FaStar } from 'react-icons/fa';
 import banner from '/banner.jpg'
 import bannerl from '/banner-2.jpg'
@@ -20,12 +21,9 @@ import { MdDone } from 'react-icons/md';
 import productImg from '/product.jpg'
 import Benefits from '../components/Benefits'
 import SingleCards from '../components/SingleCards';
-import SpecificationSlider from '../components/slider/SpecificationSlider';
-import Featues from '../components/Featues';
-import DetailsPageImage from '../components/DetailsPageImage';
-import Contact from '../components/Contact';
-import Login from '../components/Login';
-const Catalog = () => {
+
+
+const Products = () => {
     const [products, setProducts] = useState([])
     const [itemsperpage, setitemsperpage] = useState(6)
     const [counts, setCounts] = useState(0)
@@ -56,10 +54,8 @@ const Catalog = () => {
         setitemsperpage(value)
         setcurrentPage(0)
     }
-
-
     return (
-        <section>
+        <div>
             <div className='max-w-[1398px] mx-auto'>
                 <img src={banner} alt="" />
             </div>
@@ -372,19 +368,14 @@ const Catalog = () => {
 
 
             </div>
-            <Contact></Contact>
 
 
-
-       
-
-            <SpecificationSlider></SpecificationSlider>
-            <Featues></Featues>
             <div className='bg-slate-100'>
                 <Benefits></Benefits>
             </div>
-        </section>
+
+        </div>
     );
 };
 
-export default Catalog;
+export default Products;

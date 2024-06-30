@@ -5,9 +5,12 @@ import discover from '/discover.jpg'
 import american from '/american-express.jpg'
 import { FaSquareFacebook } from 'react-icons/fa6'
 import { FaInstagramSquare } from 'react-icons/fa'
+
 const Footer = () => {
     return (
-        <div className="bg-[#020203] text-white">
+        <>
+         
+         <div className="bg-[#020203] text-white">
             <div className="max-w-[1398px] mx-auto flex justify-between py-12 px-6">
                 <div>
                     <h2 className=" text-white text-4xl font-medium">Sign Up To Our Newsletter.</h2>
@@ -96,6 +99,8 @@ const Footer = () => {
                 <p>Copyright © 2020 Shop Pty. Ltd.</p>
             </div>
         </div>
+        </>
+       
     );
 };
 
