@@ -2180,14 +2180,9 @@ const Home = () => {
             <div className="px-6 max-w-[1398px] mx-auto">
                 <Testimonials></Testimonials>
             </div>
-            <div>
+      
                 <Benefits></Benefits>
-            </div>
-
-
-
-
-
+           
         </div>
     );
 };

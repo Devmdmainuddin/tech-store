@@ -8,7 +8,7 @@ import { Navigation, Autoplay } from 'swiper/modules';
 
 const HeroBanner = () => {
 
-console.log('banner',banner)
+    console.log('banner', banner)
     return (
         <>
             <Swiper
@@ -28,37 +28,37 @@ console.log('banner',banner)
                     disableOnInteraction: false,
                 }}
                 modules={[Navigation, Autoplay]} className="mySwiper">
-{/* {banner} */}
+                {/* {banner} */}
                 <SwiperSlide className=''>
-                    <div id="slide1" className={`h-[328px] rounded-xl carousel-item relative w-full bg-[url('${banner}')] bg-cover bg-center`}>
+                    <div id="slide1" className={`h-[328px]  carousel-item relative w-full bg-[url('/banner-1.jpg')] bg-cover bg-center`}>
                         {/* <img  src="https://i.ibb.co/3TttPjT/pexels-dom-j-7304-227405.jpg" className="w-full h-[500px]  object-cover" /> */}
-                        {/* <p className='w-1/2 mx-auto'>Every year, millions of students worldwide apply for scholarships. Whether these scholarship opportunities are for private education tuition or to cover the cost of college education</p> */}
+                        
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className=''>
                     <div id="slide2" className="carousel-item relative w-full  ">
 
-                        <img src={banner} className="w-full h-[328px] object-cover rounded-xl" />
+                        <img src={banner} className="w-full h-[328px] object-cover" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className=''>
                     <div id="slide3" className="carousel-item relative w-full ">
-                        <img src={banner} className=" w-full h-[328px]  object-cover rounded-xl" />
+                        <img src={banner} className=" w-full h-[328px]  object-cover" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className=''>
                     <div id="slide4" className="carousel-item relative w-full ">
-                        <img src={banner} className="w-full h-[328px] bg-center  object-cover rounded-xl" />
+                        <img src={banner} className="w-full h-[328px] bg-center  object-cover " />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className=''>
                     <div id="slide3" className="carousel-item relative w-full ">
-                        <img src={banner} className="w-full h-[328px]  object-cover rounded-xl" />
+                        <img src={banner} className="w-full h-[328px]  object-cover" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className=''>
                     <div id="slide2" className="carousel-item relative w-full ">
-                        <img src={banner} className="w-full h-[328px]  object-cover rounded-xl" />
+                        <img src={banner} className="w-full h-[328px]  object-cover" />
 
                     </div>
                 </SwiperSlide>
@@ -66,7 +66,8 @@ console.log('banner',banner)
 
 
             </Swiper>
-         
+            
+
         </>
     );
 };

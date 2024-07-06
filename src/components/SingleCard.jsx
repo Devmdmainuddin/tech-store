@@ -35,7 +35,25 @@ const SingleCard = () => {
         const params = {
             navigation: true,
             loop: true,
-            slidesPerView: 6,
+            //  slidesPerView: 2,
+            breakpoints:{
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 10,
+                },
+                768: {
+                  slidesPerView: 3,
+                  spaceBetween: 20,
+                },
+                1024: {
+                  slidesPerView: 4,
+                  spaceBetween: 30,
+                },
+                1280: {
+                    slidesPerView: 6,
+                    spaceBetween: 40,
+                  },
+              },
             // spaceBetween:30,
             // These are new...
             injectStyles: [
@@ -71,7 +89,7 @@ const SingleCard = () => {
                 {products.map((products, idx) => <>
                     <swiper-slide class="blue-slide " key={idx}>
                         <div className="group">
-                            <div className="block  transition-all duration-300 p-6   group-hover:shadow-xl ">
+                            <div className="block  transition-all duration-300 md:p-6 p-2   group-hover:shadow-xl ">
                                 <Link to='/products-Details' className=" p-6 ">
                                     <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />{products.status}</span>
                                     <div className='relative overflow-hidden'>
@@ -105,8 +123,8 @@ const SingleCard = () => {
 
                                     </div>
                                 </Link>
-                                <div className='relative overflow-hidden bottom-8 left-0 right-0  opacity-0 transition-all duration-500 invisible block w-full group-hover:bottom-0 group-hover:opacity-100  group-hover:visible'>
-                                    <button  className=" rounded-full border-2 border-[#0156FF] text-[#0156FF] flex gap-2 items-center justify-center py-2 px-7"><BsCart /> add To Cart</button>
+                                <div className=' overflow-hidden    opacity-0 transition-all duration-500 invisible  w-full group-hover:bottom-0 group-hover:opacity-100  group-hover:visible'>
+                                    <button  className=" flex gap-2 justify-center items-center w-full rounded-full border-2 border-[#0156FF] text-[#0156FF]  p-2  "><BsCart /> add To Cart</button>
                                 </div>
 
                             </div>

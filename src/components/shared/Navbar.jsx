@@ -35,9 +35,9 @@ const Navbar = () => {
                         <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[#0156FF] text-white flex justify-center items-center">2</div>
                     </button>
 
-                    {
-                        cartOpen && (
-                            <div className="absolute z-50 top-full right-12">
+                    {/* {
+                        cartOpen && ( */}
+                            <div className={`absolute z-50 top-full right-12 transition-all duration-300 ${cartOpen ? "opacity-100 visible z-50" :" opacity-0 invisible"}`}>
                                 <div
                                     className="relative w-screen max-w-sm mx-auto shadow-2xl bg-gray-100 px-4 py-8 sm:px-6 lg:px-8"
                                     aria-modal="true"
@@ -144,28 +144,28 @@ const Navbar = () => {
                             </div>
 
 
-                        )
-                    }
+                        {/* )
+                    } */}
 
 
                     <img
                         onClick={() => setusemenuOpen(!usemenuOpen)}
-                        className='rounded-full'
+                        className='rounded-full transition-all duration-700'
                         referrerPolicy='no-referrer'
                         src={user && user.photoURL ? user.photoURL : avatarImg}
                         alt='profile'
                         height='36'
                         width='36'
                     />
-                    {
-                        usemenuOpen && (
-                            <div className="absolute z-50 top-full right-12">
+                    {/* {
+                        usemenuOpen && ( */}
+                            <div className={`absolute z-50 top-full right-0 transition-all duration-300  ${usemenuOpen ? "opacity-100 visible z-50" :" opacity-0 invisible"}`}>
                                 {user ? (
                                     <>
 
                                         <div
 
-                                            className='px-4 py-3 hover:bg-neutral-100 transition font-semibold cursor-pointer'
+                                            className='px-4 py-3 bg-neutral-100 transition font-semibold cursor-pointer'
                                         >
                                             Logout
                                         </div>
@@ -192,8 +192,8 @@ const Navbar = () => {
                             </div>
 
 
-                        )
-                    }
+                    {/* //     )
+                    // } */}
                 </div>
 
 

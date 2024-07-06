@@ -11,15 +11,20 @@ const Footer = () => {
         <>
          
          <div className="bg-[#020203] text-white">
-            <div className="max-w-[1398px] mx-auto flex justify-between py-12 px-6">
+            <div className="max-w-[1398px] mx-auto flex flex-col lg:flex-row justify-between py-12 px-6">
                 <div>
                     <h2 className=" text-white text-4xl font-medium">Sign Up To Our Newsletter.</h2>
                     <p className="mt-[9px]">Be the first to hear about the latest offers.</p>
                 </div>
 
-                <div className="lg:flex mb-4">
-                    <input className="py-3 px-6 xl:px-9 mb-2 lg:mb-0 xl:mb-0 xl:mr-2 w-full lg:w-auto bg-transparent placeholder-darkBlueGray-400 border-2 border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 rounded-md" type="email" placeholder="Enter you Email" />
-                    <button className="inline-block py-3 px-10  text-[14px]  text-white font-semibold text-center bg-blue-600   rounded-full" href="#">Subscribe</button>
+                <div className="flex flex-row items-center mt-4 gap-x-4">
+                    <div>
+                    <input className="py-3 px-6 xl:px-9  xl:mr-2 w-full lg:w-auto bg-transparent placeholder-darkBlueGray-400 border-2 border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 rounded-md" type="email" placeholder="Enter you Email" />
+                    </div>
+                    
+                   <div>
+                    <button className="block py-3  px-6 md:px-10  text-[14px]  text-white font-semibold text-center bg-blue-600   rounded-full" href="#">Subscribe</button>
+                    </div> 
                 </div>
 
             </div>
@@ -81,14 +86,14 @@ const Footer = () => {
                 </div>
             </div>
             <div className='max-w-[1398px] mx-auto h-[1px] bg-slate-400 px-6 '></div>
-            <div className="max-w-[1398px] mx-auto flex justify-between py-12 px-6">
+            <div className="max-w-[1398px] mx-auto flex justify-between py-12 px-6 relative">
                 <div className="flex gap-2">
                     <FaSquareFacebook />
                     <FaInstagramSquare />
                     </div>
 
 
-                <div className="flex gap-2">
+                <div className="absolute sm:static top-full left-0 right-0 justify-center bg-[#020203] flex-row flex gap-2 py-4 sm:py-0">
                     <img src={paypal} alt="" />
                     <img src={maestro} alt="" />
                     <img src={visa} alt="" />
