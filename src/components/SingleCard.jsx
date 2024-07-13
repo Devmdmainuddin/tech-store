@@ -8,7 +8,6 @@ import { MdDone } from 'react-icons/md';
 import { useEffect, useRef, useState } from "react";
 import { register } from "swiper/element/bundle";
 
-// import SingleBanner from './banner/SingleBanner';
 register();
 
 

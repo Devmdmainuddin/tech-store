@@ -246,7 +246,7 @@ const Home = () => {
                     </div>
 
                 </Link>
-               
+
             </div>
             <Tabs className='max-w-[1398px] mx-auto px-6'>
                 <TabList>
@@ -465,7 +465,7 @@ const Home = () => {
                             </div>
 
                         </Link>
-                      
+
                     </div>
                 </TabPanel>
                 <TabPanel>
@@ -677,7 +677,7 @@ const Home = () => {
                             </div>
 
                         </Link>
-                    
+
                     </div>
                 </TabPanel>
                 <TabPanel>
@@ -1126,8 +1126,8 @@ const Home = () => {
                                         <div className='relative overflow-hidden'>
                                             <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={laptop} alt="" />
                                             <div className='absolute top-4 -right-10 group-hover:right-0 transition-all duration-500 opacity-0 invisible group-hover:opacity-100  group-hover:visible'>
-                                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full' />
-                                                <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1' />
+                                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] transition-all duration-500 hover:border-[#0156FF] hover:bg-[#0156FF] hover:text-white rounded-full' />
+                                                <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] transition-all duration-500 hover:border-[#0156FF] hover:bg-[#0156FF] hover:text-white rounded-full mt-1' />
                                             </div>
 
                                         </div>
@@ -1167,8 +1167,8 @@ const Home = () => {
                                         <div className='relative overflow-hidden'>
                                             <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={laptop} alt="" />
                                             <div className='absolute top-4 -right-10 group-hover:right-0 transition-all duration-500 opacity-0 invisible group-hover:opacity-100  group-hover:visible'>
-                                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full' />
-                                                <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1' />
+                                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] transition-all duration-500 hover:border-[#0156FF] hover:bg-[#0156FF] hover:text-white rounded-full' />
+                                                <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] transition-all duration-500 hover:border-[#0156FF] hover:bg-[#0156FF] hover:text-white rounded-full mt-1' />
                                             </div>
 
                                         </div>
@@ -1208,8 +1208,8 @@ const Home = () => {
                                         <div className='relative overflow-hidden'>
                                             <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={laptop} alt="" />
                                             <div className='absolute top-4 -right-10 group-hover:right-0 transition-all duration-500 opacity-0 invisible group-hover:opacity-100  group-hover:visible'>
-                                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full' />
-                                                <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1' />
+                                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] transition-all duration-500 hover:border-[#0156FF] hover:bg-[#0156FF] hover:text-white rounded-full' />
+                                                <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] transition-all duration-500 hover:border-[#0156FF] hover:bg-[#0156FF] hover:text-white rounded-full mt-1' />
                                             </div>
 
                                         </div>
@@ -1970,10 +1970,17 @@ const Home = () => {
                         <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
                             <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />in stock</span>
                             <div className='relative overflow-hidden'>
-                                <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={monitors} alt="" />
-                                <div className='absolute top-4 -right-10 group-hover:right-0 transition-all duration-500 opacity-0 invisible group-hover:opacity-100  group-hover:visible'>
-                                    <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full' />
-                                    <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1' />
+                                {/* <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-700 group-hover:scale-110 group-hover:opacity-0 group-hover:invisible " src={monitors} alt="" />
+                                <img className="   w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-700  group-hover:scale-110 opacity-0 invisible  group-hover:opacity-100  group-hover:visible " src={laptop} alt="" /> */}
+                                <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-700 group-hover:scale-110  group-hover:hidden " src={monitors} alt="" />
+                                <img className="hidden   w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-700  group-hover:scale-110 group-hover:block " src={laptop} alt="" />
+                                <div className='absolute -bottom-full left-1/2 -translate-x-1/2 group-hover:bottom-4 transition-all duration-500 opacity-0 invisible group-hover:opacity-100  group-hover:visible flex items-center gap-3'>
+                                    <FaRegHeart aria-label='add to wishlish'
+                                        title='add to wishlish' className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] transition-all duration-500 hover:border-[#0156FF] hover:bg-[#0156FF] hover:text-white rounded-full' />
+                                    <FiBarChart2 aria-label='add to cart'
+                                        title='add to cart' className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] transition-all duration-500 hover:border-[#0156FF] hover:bg-[#0156FF] hover:text-white rounded-full mt-1' />
+                                    <FiBarChart2 aria-label='quick view'
+                                        title='quick view' className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] transition-all duration-500 hover:border-[#0156FF] hover:bg-[#0156FF] hover:text-white rounded-full mt-1' />
                                 </div>
 
                             </div>
@@ -1992,13 +1999,13 @@ const Home = () => {
 
                                 </div>
 
-                                <h6 className="font-normal text-sm  mt-2 mb-5">EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...</h6>
+                                <h6 className="font-normal text-sm  mt-2 mb-5 transition-all duration-500 hover:text-lime-700">EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...</h6>
                                 <div className='flex flex-col mb-2'>
                                     <span className="font-bold  line-through text-[#666666]">$249</span>
                                     <span className=" text-lg font-semibold">$149</span>
                                 </div>
                                 <div className='relative overflow-hidden bottom-8 left-0 right-0  opacity-0 transition-all duration-500 invisible   group-hover:bottom-0 group-hover:opacity-100  group-hover:visible'>
-                                    <Link className=" rounded-full border-2 border-[#0156FF] text-[#0156FF] flex gap-2 items-center justify-center py-2"><BsCart /> add To Cart</Link>
+                                    <Link className=" rounded-full border-2 transition-all duration-500 border-[#0156FF] text-[#0156FF] hover:bg-[#0156FF] hover:text-white flex gap-2 items-center justify-center py-2"><BsCart /> add To Cart</Link>
                                 </div>
 
                             </div>
@@ -2013,8 +2020,8 @@ const Home = () => {
                             <div className='relative overflow-hidden'>
                                 <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={monitors} alt="" />
                                 <div className='absolute top-4 -right-10 group-hover:right-0 transition-all duration-500 opacity-0 invisible group-hover:opacity-100  group-hover:visible'>
-                                    <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full' />
-                                    <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1' />
+                                    <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] transition-all duration-500 hover:border-[#0156FF] hover:bg-[#0156FF] hover:text-white rounded-full' />
+                                    <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] transition-all duration-500 hover:border-[#0156FF] hover:bg-[#0156FF] hover:text-white rounded-full mt-1' />
                                 </div>
 
                             </div>
@@ -2039,7 +2046,7 @@ const Home = () => {
                                     <span className=" text-lg font-semibold">$149</span>
                                 </div>
                                 <div className='relative overflow-hidden bottom-8 left-0 right-0  opacity-0 transition-all duration-500 invisible   group-hover:bottom-0 group-hover:opacity-100  group-hover:visible'>
-                                    <Link className=" rounded-full border-2 border-[#0156FF] text-[#0156FF] flex gap-2 items-center justify-center py-2"><BsCart /> add To Cart</Link>
+                                    <Link className=" rounded-full border-2 transition-all duration-500 border-[#0156FF] text-[#0156FF] hover:bg-[#0156FF] hover:text-white flex gap-2 items-center justify-center py-2"><BsCart /> add To Cart</Link>
                                 </div>
 
                             </div>
@@ -2054,8 +2061,8 @@ const Home = () => {
                             <div className='relative overflow-hidden'>
                                 <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={monitors} alt="" />
                                 <div className='absolute top-4 -right-10 group-hover:right-0 transition-all duration-500 opacity-0 invisible group-hover:opacity-100  group-hover:visible'>
-                                    <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full' />
-                                    <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1' />
+                                    <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] transition-all duration-500 hover:border-[#0156FF] hover:bg-[#0156FF] hover:text-white rounded-full' />
+                                    <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] transition-all duration-500 hover:border-[#0156FF] hover:bg-[#0156FF] hover:text-white rounded-full mt-1' />
                                 </div>
 
                             </div>
@@ -2080,7 +2087,7 @@ const Home = () => {
                                     <span className=" text-lg font-semibold">$149</span>
                                 </div>
                                 <div className='relative overflow-hidden bottom-8 left-0 right-0  opacity-0 transition-all duration-500 invisible   group-hover:bottom-0 group-hover:opacity-100  group-hover:visible'>
-                                    <Link className=" rounded-full border-2 border-[#0156FF] text-[#0156FF] flex gap-2 items-center justify-center py-2"><BsCart /> add To Cart</Link>
+                                    <Link className=" rounded-full border-2 transition-all duration-500 border-[#0156FF] text-[#0156FF] hover:bg-[#0156FF] hover:text-white flex gap-2 items-center justify-center py-2"><BsCart /> add To Cart</Link>
                                 </div>
 
                             </div>
@@ -2095,8 +2102,8 @@ const Home = () => {
                             <div className='relative overflow-hidden'>
                                 <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={monitors} alt="" />
                                 <div className='absolute top-4 -right-10 group-hover:right-0 transition-all duration-500 opacity-0 invisible group-hover:opacity-100  group-hover:visible'>
-                                    <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full' />
-                                    <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1' />
+                                    <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] transition-all duration-500 hover:border-[#0156FF] hover:bg-[#0156FF] hover:text-white rounded-full' />
+                                    <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] transition-all duration-500 hover:border-[#0156FF] hover:bg-[#0156FF] hover:text-white rounded-full mt-1' />
                                 </div>
 
                             </div>
@@ -2121,7 +2128,7 @@ const Home = () => {
                                     <span className=" text-lg font-semibold">$149</span>
                                 </div>
                                 <div className='relative overflow-hidden bottom-8 left-0 right-0  opacity-0 transition-all duration-500 invisible   group-hover:bottom-0 group-hover:opacity-100  group-hover:visible'>
-                                    <Link className=" rounded-full border-2 border-[#0156FF] text-[#0156FF] flex gap-2 items-center justify-center py-2"><BsCart /> add To Cart</Link>
+                                    <Link className=" rounded-full border-2 transition-all duration-500 border-[#0156FF] text-[#0156FF] hover:bg-[#0156FF] hover:text-white flex gap-2 items-center justify-center py-2"><BsCart /> add To Cart</Link>
                                 </div>
 
                             </div>
@@ -2136,8 +2143,8 @@ const Home = () => {
                             <div className='relative overflow-hidden'>
                                 <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={monitors} alt="" />
                                 <div className='absolute top-4 -right-10 group-hover:right-0 transition-all duration-500 opacity-0 invisible group-hover:opacity-100  group-hover:visible'>
-                                    <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full' />
-                                    <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1' />
+                                    <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] transition-all duration-500 hover:border-[#0156FF] hover:bg-[#0156FF] hover:text-white rounded-full' />
+                                    <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] transition-all duration-500 hover:border-[#0156FF] hover:bg-[#0156FF] hover:text-white rounded-full mt-1' />
                                 </div>
 
                             </div>
@@ -2162,7 +2169,7 @@ const Home = () => {
                                     <span className=" text-lg font-semibold">$149</span>
                                 </div>
                                 <div className='relative overflow-hidden bottom-8 left-0 right-0  opacity-0 transition-all duration-500 invisible   group-hover:bottom-0 group-hover:opacity-100  group-hover:visible'>
-                                    <Link className=" rounded-full border-2 border-[#0156FF] text-[#0156FF] flex gap-2 items-center justify-center py-2"><BsCart /> add To Cart</Link>
+                                    <Link className=" rounded-full border-2 transition-all duration-500 border-[#0156FF] text-[#0156FF] hover:bg-[#0156FF] hover:text-white flex gap-2 items-center justify-center py-2"><BsCart /> add To Cart</Link>
                                 </div>
 
                             </div>
@@ -2180,9 +2187,9 @@ const Home = () => {
             <div className="px-6 max-w-[1398px] mx-auto">
                 <Testimonials></Testimonials>
             </div>
-      
-                <Benefits></Benefits>
-           
+
+            <Benefits></Benefits>
+
         </div>
     );
 };
