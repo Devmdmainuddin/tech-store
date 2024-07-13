@@ -19,11 +19,10 @@ const SingleCards = () => {
 
     return (
         <div className=" grid grid-cols-1">
-
             {
-                products.map(product =>
-                    <>
-                        <div className='flex justify-between  gap-[53px] hover:shadow-xl p-6'>
+                products.map((product) =>
+                   
+                        <div key={product.id} className='flex justify-between  gap-[53px] hover:shadow-xl p-6'>
                             <div >
                                 <img src={productImg} alt="" className='w-[250px] h-[250px]' />
                                 <div className="flex my-3 text-[#E9A426]">
@@ -70,9 +69,6 @@ const SingleCards = () => {
                                 </div>
                             </div>
                         </div>
-
-                    </>
-
                 )
             }
 

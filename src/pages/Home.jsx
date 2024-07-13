@@ -1973,7 +1973,7 @@ const Home = () => {
                                 {/* <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-700 group-hover:scale-110 group-hover:opacity-0 group-hover:invisible " src={monitors} alt="" />
                                 <img className="   w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-700  group-hover:scale-110 opacity-0 invisible  group-hover:opacity-100  group-hover:visible " src={laptop} alt="" /> */}
                                 <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-700 group-hover:scale-110  group-hover:hidden " src={monitors} alt="" />
-                                <img className="hidden   w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-700  group-hover:scale-110 group-hover:block " src={laptop} alt="" />
+                                <img className=" hidden  w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-700  group-hover:scale-110 group-hover:block " src={laptop} alt="" />
                                 <div className='absolute -bottom-full left-1/2 -translate-x-1/2 group-hover:bottom-4 transition-all duration-500 opacity-0 invisible group-hover:opacity-100  group-hover:visible flex items-center gap-3'>
                                     <FaRegHeart aria-label='add to wishlish'
                                         title='add to wishlish' className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] transition-all duration-500 hover:border-[#0156FF] hover:bg-[#0156FF] hover:text-white rounded-full' />
@@ -2018,7 +2018,9 @@ const Home = () => {
                         <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
                             <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />in stock</span>
                             <div className='relative overflow-hidden'>
-                                <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={monitors} alt="" />
+                                <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-700 group-hover:scale-110  group-hover:hidden " src={monitors} alt="" />
+                                <img className="block w-[150px] h-[150px] mx-auto absolute group-hover:relative -left-full top-0 group-hover:left-0 transition-all duration-500 opacity-0 invisible group-hover:opacity-100  group-hover:visible" src={laptop} alt="" />
+                                
                                 <div className='absolute top-4 -right-10 group-hover:right-0 transition-all duration-500 opacity-0 invisible group-hover:opacity-100  group-hover:visible'>
                                     <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] transition-all duration-500 hover:border-[#0156FF] hover:bg-[#0156FF] hover:text-white rounded-full' />
                                     <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] transition-all duration-500 hover:border-[#0156FF] hover:bg-[#0156FF] hover:text-white rounded-full mt-1' />

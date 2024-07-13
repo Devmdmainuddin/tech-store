@@ -1,11 +1,44 @@
 // import Login from "../components/Login";
 
 import { IoIosArrowForward } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Benefits from "../components/Benefits";
+import { useContext } from "react";
+import { AuthContext } from "../providers/AuthProvider";
+import toast from "react-hot-toast";
 
 
 const LoginPage = () => {
+const {signIn,}= useContext(AuthContext)
+const navigate = useNavigate();  
+const handleLogin = async e =>{
+
+        e.preventDefault()
+
+        const form = e.target
+
+        const email = form.email.value
+        const password = form.password.value
+
+        signIn(email, password)
+            .then((res) => {
+               
+                // console.log(user)
+               
+
+                navigate('/')
+
+
+
+
+            })
+            .catch(error => {
+                
+               toast.error(error.message)
+               
+            })
+
+    }
     return (
         <>
         
@@ -30,13 +63,13 @@ const LoginPage = () => {
                 <div className="px-[57px] py-10 bg-slate-100">
                     <h2 className="text-lg font-semibold">Registered Customers</h2>
                     <p className="text-sm font-light leading-10">If you have an account, sign in with your email address.</p>
-                    <form action="">
+                    <form action="" onSubmit={handleLogin}>
                         <div className="flex flex-col  mt-3">
                             <label htmlFor="email">Email *</label>
                             <input type="email" name="email" id="" placeholder="your Email" className="p-2 border border-[#A2A6B0] outline-none mt-2" />
                         </div>
                         <div className="flex flex-col  mt-3">
-                            <label htmlFor="password">Email *</label>
+                            <label htmlFor="password">password *</label>
                             <input type="password" name="password" id="" placeholder="your password" className="p-2 border border-[#A2A6B0] outline-none mt-2" />
                         </div>
                         <div className="flex justify-center items-center gap-6 ">
