@@ -5,7 +5,7 @@ import bannerl from '/banner-2.jpg'
 import { IoIosArrowForward, IoIosArrowUp } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 import { BsCart } from 'react-icons/bs';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { CgMenuGridR } from 'react-icons/cg';
 import { BiMenuAltLeft } from 'react-icons/bi';
 import msi from '/msi.png'
@@ -21,10 +21,12 @@ import { MdDone } from 'react-icons/md';
 import productImg from '/product.jpg'
 import Benefits from '../components/Benefits'
 import SingleCards from '../components/SingleCards';
+import { ProductContext } from '../contexts/ProductContextProvider';
 
 
 const Products = () => {
-    const [products, setProducts] = useState([])
+    // const [products, setProducts] = useState([])
+    const { products } = useContext(ProductContext)
     const [itemsperpage, setitemsperpage] = useState(6)
     const [counts, setCounts] = useState(0)
     const numberofPage = Math.ceil(counts / itemsperpage);
@@ -283,13 +285,13 @@ const Products = () => {
                     {/*  main  */}
                     <div className="w-full sm:w-1/2 lg:w-8/12 xl:w-9/12 sm:pl-7">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-                            {products.map((product,) => <>
+                            {products.slice(0,18).map((product,) => <>
                                 <div className="">
                                     <div className="block p-px group ">
                                         <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
                                             <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />{product.status}</span>
                                             <div className='relative overflow-hidden'>
-                                                <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={productImg} alt="" />
+                                                <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={product.image} alt="" />
                                                 <div className='absolute top-4 -right-10 group-hover:right-0 transition-all duration-500 opacity-0 invisible group-hover:opacity-100  group-hover:visible'>
                                                     <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full' />
                                                     <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1' />
@@ -313,8 +315,8 @@ const Products = () => {
 
                                                 <h6 className="font-normal text-sm  mt-2 mb-5">{product.title}</h6>
                                                 <div className='flex flex-col mb-2'>
-                                                    <span className="font-bold  line-through text-[#666666]">${product.price}</span>
-                                                    <span className=" text-lg font-semibold">${product.discount_price}</span>
+                                                    <span className="font-bold  line-through text-[#666666]">{product.discount_price?product.discount_price:'' }</span>
+                                                    <span className=" text-lg font-semibold">${product.price} </span>
                                                 </div>
                                                 <div className='relative overflow-hidden bottom-8 left-0 right-0  opacity-0 transition-all duration-500 invisible   group-hover:bottom-0 group-hover:opacity-100  group-hover:visible'>
                                                     <Link className=" rounded-full border-2 border-[#0156FF] text-[#0156FF] flex gap-2 items-center justify-center py-2"><BsCart /> add To Cart</Link>
