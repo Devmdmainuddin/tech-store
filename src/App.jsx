@@ -27,9 +27,15 @@ const router = createBrowserRouter([
         element: <Products/>,
       },
       {
-        path: "/products-Details",
+        path: "/products/:id",
         element: <ProductsDetails/>,
+        loader:({params})=>fetch(`https://fakestoreapi.com/products/${params.id}`)
       },
+    //   {
+    //     path: '/propertie/:id',
+    //     element: <ProDetails></ProDetails>,
+    //     loader:({params})=>fetch(`http://localhost:4000/propertie/${params.id}`)
+    // },
       {
         path: "/shoppingCart",
         element:<ShoppingCart></ShoppingCart>,

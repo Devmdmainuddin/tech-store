@@ -1,12 +1,18 @@
 import { IoIosArrowForward } from 'react-icons/io';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import DetailsPageImage from '../components/DetailsPageImage';
 import SpecificationSlider from '../components/slider/SpecificationSlider';
 import Featues from '../components/Featues';
 import Benefits from '../components/Benefits';
+import { useContext } from 'react';
+import { ProductContext } from '../contexts/ProductContextProvider';
 const ProductsDetails = () => {
+    const { id } = useParams();
+    const { products } = useContext(ProductContext)
+    const product = products.find(product => product.id === parseInt(id))
+
     return (
         <div >
 
@@ -48,9 +54,9 @@ const ProductsDetails = () => {
                                         <li><a className="text-sm font-medium text-[#A3A3A3] transition-all duration-300  hover:text-gray-700" href="#">MSI WS Series</a></li>
                                     </ul>
                                     <div>
-                                        <h2 className='text-3xl font-medium mt-6'>MSI MPG Trident 3</h2>
-                                        <p className='text-[#0156FF] text-[12px] font-normal mt-6'>Be the first to review this product</p>
-                                        <p className='max-w-[567px] text-xl font-light mt-6'>MSI MPG Trident 3 10SC-005AU Intel i7 10700F, 2060 SUPER, 16GB RAM, 512GB SSD, 2TB HDD, Windows 10 Home, Gaming Keyboard and Mouse 3 Years Warranty Gaming Desktop</p>
+                                        <h2 className='text-3xl font-medium mt-6'>{product.title}</h2>
+                                        <p className='text-[#0156FF] text-[12px] font-normal mt-6'> {product.description} </p>
+                                        
 
 
                                     </div>
@@ -92,12 +98,13 @@ const ProductsDetails = () => {
                                         <li><a className="text-sm font-medium text-[#A3A3A3] transition-all duration-300  hover:text-gray-700" href="#">MSI WS Series</a></li>
                                     </ul>
                                     <div>
-                                        <h2 className='text-3xl font-medium mt-6'>MSI MPG Trident 3</h2>
+                                        <h2 className='text-3xl font-medium mt-6'>{product.title}</h2>
                                         <p className='text-[#0156FF] text-[12px] font-normal mt-6'>Be the first to review this product</p>
 
 
                                         <ul className='list-disc list-inside mt-6 text-sm font-light'>
-                                            <li> Intel Core i7-10700F</li>
+                                        <li> {product.description}</li>
+                                           {/* <li> Intel Core i7-10700F</li>
                                             <li>  Intel H410</li>
                                             <li>WHITE</li>
                                             <li>NVIDIA MSI GeForce RTX 2060 SUPER 8GB AERO ITX GDDR6</li>
@@ -108,7 +115,7 @@ const ProductsDetails = () => {
                                             <li>3.5 HDD (0/0), 2.5 HDD/SSD(1/0), M.2 (1/0)</li>
                                             <li>Intel WGI219Vethernet (10/100/1000M)</li>
                                             <li>AX200 (WIFI 6)+BT5.1</li>
-                                            <li>PSU 330W</li>
+                                            <li>PSU 330W</li> */}
                                         </ul>
                                         {/* specs */}
 
@@ -152,7 +159,7 @@ const ProductsDetails = () => {
                                         <li><a className="text-sm font-medium text-[#A3A3A3] transition-all duration-300  hover:text-gray-700" href="#">MSI WS Series</a></li>
                                     </ul>
                                     <div>
-                                        <h2 className='text-3xl font-medium mt-6'>MSI MPG Trident 3</h2>
+                                        <h2 className='text-3xl font-medium mt-6'>{product.title}</h2>
                                         <p className='text-[#0156FF] text-[12px] font-normal mt-6'>Be the first to review this product</p>
                                         {/* about product */}
                                         {/* <p className='text-xl font-light mt-6'>MSI MPG Trident 3 10SC-005AU Intel i7 10700F, 2060 SUPER, 16GB RAM, 512GB SSD, 2TB HDD, Windows 10 Home, Gaming Keyboard and Mouse 3 Years Warranty Gaming Desktop</p> */}
@@ -195,7 +202,7 @@ const ProductsDetails = () => {
 
                 </div>
                 <div className='w-1/2 mt-16'>
-                    <DetailsPageImage></DetailsPageImage>
+                    <DetailsPageImage src={product.image}></DetailsPageImage>
                 </div>
             </div>
             <div>

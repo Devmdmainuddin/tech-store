@@ -98,12 +98,116 @@ const Home = () => {
             <section className="mensCollection">
                 <Tabs className='max-w-[1398px] mx-auto px-6'>
                     <TabList>
-                        <Tab>MSI Infinute Series</Tab>
-                        <Tab>MSI Triden</Tab>
-                        <Tab>MSI GL Series</Tab>
-                        <Tab>MSI Nightblade</Tab>
+                        <Tab>Cloting</Tab>
+                        <Tab>shoes</Tab>
+                        <Tab>Muslim Wear</Tab>
+                        <Tab>Accessories</Tab>
+                        <Tab>Bags</Tab>
+                        <Tab>Watches</Tab>
                     </TabList>
 
+                    <TabPanel>
+                        <div className="my-16 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6">
+                            <SingleBanner to='/all-products' image={laptopsimg} categoreys='men Clothing'></SingleBanner>
+                            {menClothing.slice(0,5).map(desktops =>
+                                <Link to='/products-Details' className="" key={desktops._id}>
+                                    <div className="block p-px group ">
+                                        <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
+                                            <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />in stock</span>
+                                            <div className='relative overflow-hidden'>
+                                                <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={desktops.image} alt="" />
+                                                <div className='absolute top-4 -right-10 group-hover:right-0 transition-all duration-500 opacity-0 invisible group-hover:opacity-100  group-hover:visible'>
+                                                    <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full' />
+                                                    <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1' />
+                                                </div>
+
+                                            </div>
+
+
+                                            <div className="relative block ">
+                                                <div className='flex justify-between'>
+                                                    <div className="flex  mb-3 text-[#E9A426]">
+                                                        <FaStar />
+                                                        <FaStar />
+                                                        <FaStar />
+                                                        <FaStar />
+                                                        <ImStarHalf />
+                                                    </div>
+                                                    <span className="block text-sm font-medium text-gray-500"> reviews (4)</span>
+
+                                                </div>
+
+                                                <h6 className="font-normal text-sm  mt-2 mb-5">EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...</h6>
+                                                <div className='flex flex-col mb-2'>
+                                                    <span className="font-bold  line-through text-[#666666]">$249</span>
+                                                    <span className=" text-lg font-semibold">$149</span>
+                                                </div>
+                                                <div className='relative overflow-hidden bottom-8 left-0 right-0  opacity-0 transition-all duration-500 invisible   group-hover:bottom-0 group-hover:opacity-100  group-hover:visible'>
+                                                    <Link className=" rounded-full border-2 border-[#0156FF] text-[#0156FF] flex gap-2 items-center justify-center py-2"><BsCart /> add To Cart</Link>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </Link>
+                            )}
+
+
+
+                        </div>
+                    </TabPanel>
+                    <TabPanel>
+                        <div className="my-16 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6">
+                            <SingleBanner to='/all-products' image={laptopsimg} categoreys='men Clothing'></SingleBanner>
+                            {menClothing.slice(0,5).map(desktops =>
+                                <Link to='/products-Details' className="" key={desktops._id}>
+                                    <div className="block p-px group ">
+                                        <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
+                                            <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />in stock</span>
+                                            <div className='relative overflow-hidden'>
+                                                <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={desktops.image} alt="" />
+                                                <div className='absolute top-4 -right-10 group-hover:right-0 transition-all duration-500 opacity-0 invisible group-hover:opacity-100  group-hover:visible'>
+                                                    <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full' />
+                                                    <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1' />
+                                                </div>
+
+                                            </div>
+
+
+                                            <div className="relative block ">
+                                                <div className='flex justify-between'>
+                                                    <div className="flex  mb-3 text-[#E9A426]">
+                                                        <FaStar />
+                                                        <FaStar />
+                                                        <FaStar />
+                                                        <FaStar />
+                                                        <ImStarHalf />
+                                                    </div>
+                                                    <span className="block text-sm font-medium text-gray-500"> reviews (4)</span>
+
+                                                </div>
+
+                                                <h6 className="font-normal text-sm  mt-2 mb-5">EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...</h6>
+                                                <div className='flex flex-col mb-2'>
+                                                    <span className="font-bold  line-through text-[#666666]">$249</span>
+                                                    <span className=" text-lg font-semibold">$149</span>
+                                                </div>
+                                                <div className='relative overflow-hidden bottom-8 left-0 right-0  opacity-0 transition-all duration-500 invisible   group-hover:bottom-0 group-hover:opacity-100  group-hover:visible'>
+                                                    <Link className=" rounded-full border-2 border-[#0156FF] text-[#0156FF] flex gap-2 items-center justify-center py-2"><BsCart /> add To Cart</Link>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </Link>
+                            )}
+
+
+
+                        </div>
+                    </TabPanel>
                     <TabPanel>
                         <div className="my-16 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6">
                             <SingleBanner to='/all-products' image={laptopsimg} categoreys='men Clothing'></SingleBanner>

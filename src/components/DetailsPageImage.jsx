@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 // import banner from '/banner-1.jpg'
 import {  Autoplay, Pagination } from 'swiper/modules';
 
-const DetailsPageImage = () => {
+const DetailsPageImage = ({src}) => {
     return (
         <>
             <Swiper
@@ -25,7 +25,7 @@ const DetailsPageImage = () => {
                 <SwiperSlide>
                     <div className="group  p-6">
                         <div className='relative overflow-hidden p-6 transition-all duration-300  '>
-                            <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={productImg} alt="" />
+                            <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={src} alt="" />
                             <div className='absolute top-0 left-10  '>
                                 <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full hover:scale-110' />
                                 <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1 hover:scale-110' />
@@ -40,9 +40,9 @@ const DetailsPageImage = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className=" group  p-6">
+                    <div className="group  p-6">
                         <div className='relative overflow-hidden p-6 transition-all duration-300  '>
-                            <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={productImg} alt="" />
+                            <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={src} alt="" />
                             <div className='absolute top-0 left-10  '>
                                 <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full hover:scale-110' />
                                 <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1 hover:scale-110' />
@@ -57,9 +57,9 @@ const DetailsPageImage = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className=" group  p-6">
+                    <div className="group  p-6">
                         <div className='relative overflow-hidden p-6 transition-all duration-300  '>
-                            <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={productImg} alt="" />
+                            <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={src} alt="" />
                             <div className='absolute top-0 left-10  '>
                                 <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full hover:scale-110' />
                                 <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1 hover:scale-110' />
@@ -74,9 +74,9 @@ const DetailsPageImage = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className=" group  p-6">
+                    <div className="group  p-6">
                         <div className='relative overflow-hidden p-6 transition-all duration-300  '>
-                            <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={productImg} alt="" />
+                            <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={src} alt="" />
                             <div className='absolute top-0 left-10  '>
                                 <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full hover:scale-110' />
                                 <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1 hover:scale-110' />
@@ -90,40 +90,7 @@ const DetailsPageImage = () => {
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
-                    <div className=" group  p-6">
-                        <div className='relative overflow-hidden p-6 transition-all duration-300  '>
-                            <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={productImg} alt="" />
-                            <div className='absolute top-0 left-10  '>
-                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full hover:scale-110' />
-                                <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1 hover:scale-110' />
-                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1 hover:scale-110' />
-                            </div>
-
-                        </div>
-
-                        <div className="max-w-[263px]  mx-auto  py-6 flex justify-center items-center gap-2">
-                            <img src={zip} alt="" className='w-[77px] h-8' /> <div className="w-[2px] h-4 bg-slate-500"></div> <h2 className='text-[12px] font-light'>own it now, up to 6 months interest free learn more</h2>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className=" group  p-6">
-                        <div className='relative overflow-hidden p-6 transition-all duration-300  '>
-                            <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={productImg} alt="" />
-                            <div className='absolute top-0 left-10  '>
-                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full hover:scale-110' />
-                                <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1 hover:scale-110' />
-                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1 hover:scale-110' />
-                            </div>
-
-                        </div>
-
-                        <div className="max-w-[263px]  mx-auto  py-6 flex justify-center items-center gap-2">
-                            <img src={zip} alt="" className='w-[77px] h-8' /> <div className="w-[2px] h-4 bg-slate-500"></div> <h2 className='text-[12px] font-light'>own it now, up to 6 months interest free learn more</h2>
-                        </div>
-                    </div>
-                </SwiperSlide>
+                
 
 
 

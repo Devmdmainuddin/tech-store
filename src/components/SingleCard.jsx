@@ -41,15 +41,15 @@ const SingleCard = () => {
                 },
                 768: {
                     slidesPerView: 3,
-                    spaceBetween: 20,
+                    spaceBetween: 10,
                 },
                 1024: {
                     slidesPerView: 4,
-                    spaceBetween: 30,
+                    spaceBetween: 10,
                 },
                 1280: {
                     slidesPerView: 6,
-                    spaceBetween: 40,
+                    spaceBetween: 10,
                 },
             },
             // spaceBetween:30,
@@ -87,16 +87,16 @@ const SingleCard = () => {
                     <swiper-slide class="blue-slide " key={idx}>
                         <div className="group">
                             <div className="block  transition-all duration-300 md:p-6 p-2   group-hover:shadow-xl ">
-                                <Link to='/products-Details' className=" p-6 ">
+                                <div  className="p-6 ">
                                     <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />{products.status}</span>
-                                    <div className='relative overflow-hidden'>
+                                    <Link to={`/products/${products.id}`} className='relative overflow-hidden'>
                                         <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={products.image} alt="" />
                                         <div className='absolute top-4 -right-10 group-hover:right-0 transition-all duration-500 opacity-0 invisible group-hover:opacity-100  group-hover:visible'>
                                             <FaRegHeart className='p-1 border border-[#0bdfe2] text-3xl text-[#A2A6B0] rounded-full' />
                                             <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1' />
                                         </div>
 
-                                    </div>
+                                    </Link>
 
                                     <div className="relative block ">
                                         <div className='flex justify-between'>
@@ -119,7 +119,7 @@ const SingleCard = () => {
 
 
                                     </div>
-                                </Link>
+                                </div>
                                 <div className=' overflow-hidden    opacity-0 transition-all duration-500 invisible  w-full group-hover:bottom-0 group-hover:opacity-100  group-hover:visible'>
                                     <button className=" flex gap-2 justify-center items-center w-full rounded-full border-2 border-[#0156FF] text-[#0156FF]  p-2  "><BsCart /> add To Cart</button>
                                 </div>
