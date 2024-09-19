@@ -49,8 +49,8 @@ const Home = () => {
             <section className="electronicsProduct">
                 <div className="max-w-[1398px] mx-auto px-6  my-16 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6">
                     <SingleBanner image={builds} categoreys='electronics'></SingleBanner>
-                    {electronics.slice(0,5).map(electronic =>
-                        <Link to='/products-Details' key={electronic._id} className="">
+                    {electronics.slice(0,5).map((electronic,key) =>
+                        <Link to='/products-Details' key={key} className="">
                             <div className="block p-px group ">
                                 <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
                                     <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />in stock</span>
@@ -109,8 +109,8 @@ const Home = () => {
                     <TabPanel>
                         <div className="my-16 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6">
                             <SingleBanner to='/all-products' image={laptopsimg} categoreys='men Clothing'></SingleBanner>
-                            {menClothing.slice(0,5).map(desktops =>
-                                <Link to='/products-Details' className="" key={desktops._id}>
+                            {menClothing.slice(0,5).map((desktops,key )=>
+                                <Link to='/products-Details' className="" key={key} >
                                     <div className="block p-px group ">
                                         <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
                                             <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />in stock</span>
@@ -160,8 +160,8 @@ const Home = () => {
                     <TabPanel>
                         <div className="my-16 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6">
                             <SingleBanner to='/all-products' image={laptopsimg} categoreys='men Clothing'></SingleBanner>
-                            {menClothing.slice(0,5).map(desktops =>
-                                <Link to='/products-Details' className="" key={desktops._id}>
+                            {menClothing.slice(0,5).map((desktops,key) =>
+                                <Link to='/products-Details' className="" key={key}>
                                     <div className="block p-px group ">
                                         <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
                                             <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />in stock</span>

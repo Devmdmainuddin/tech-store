@@ -9,9 +9,9 @@ import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
 import ProductsDetails from './pages/ProductsDetails';
-import Products from './pages/Products';
 import ShoppingCart from './pages/ShoppingCart';
 import Checkout from './pages/Checkout';
+import Shop from './pages/Shop';
 
 const router = createBrowserRouter([
   {
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/all-products",
-        element: <Products/>,
+        element: <Shop/>,
       },
       {
         path: "/products/:id",

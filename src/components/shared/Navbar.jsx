@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { BsCart3 } from "react-icons/bs";
 import { FaSearch } from "react-icons/fa";
@@ -8,21 +8,32 @@ import logo from '/logo.png'
 import { GrEdit } from "react-icons/gr";
 import { IoMdClose } from "react-icons/io";
 import useAuth from '../../hooks/useAuth';
+import { useGetproductsQuery } from '../../future/productApi';
+import { useNavigate } from 'react-router-dom';
+
 const Navbar = () => {
     const { user, logOut } = useAuth()
+    const navigate = useNavigate();
     const [isOpen, setIsOpen] = useState(false)
     const [cartOpen, setCartOpen] = useState(false)
     const [usemenuOpen, setusemenuOpen] = useState(false)
+    
+     const handleCategoryFilter = (category) => {
+        navigate(`/all-products?category=${encodeURIComponent(category)}`);
+      };
+
+
+
     return (
         <div className=" w-full">
             <nav className="relative max-w-[1398px] mx-auto py-6  flex justify-between items-center ">
                 <Link><img src={logo} alt="" /></Link>
                 <ul className="hidden lg:flex gap-6 items-center">
-                    <li><Link>Laptops</Link></li>
-                    <li><Link>Desktop PCs</Link></li>
-                    <li><Link>Networking Devices</Link></li>
-                    <li><Link>Printers & Scanners</Link></li>
-                    <li><Link to='/all-products'>All Other Products</Link></li>
+                    <li onClick={()=>handleCategoryFilter("men's clothing")}><Link>men{`'`}s clothing</Link></li>
+                    <li onClick={()=>handleCategoryFilter("jewelery")}><Link>jewelery</Link></li>
+                    <li onClick={()=>handleCategoryFilter("electronics")}><Link>electronics</Link></li>
+                    <li onClick={()=>handleCategoryFilter("women's clothing")}><Link>women{`'`}s clothing</Link></li>
+                    <li ><Link to='/all-products'>All Other Products</Link></li>
                     <li><Link>Repairs</Link></li>
                     <li><Link className="py-2 px-6 rounded-full border-2 border-[#0156FF] text-[#0156FF]">Our Deals</Link></li>
                 </ul>

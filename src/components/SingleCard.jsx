@@ -1,13 +1,12 @@
 import { FaRegHeart, FaStar } from 'react-icons/fa';
-import product from '/product.jpg'
 import { ImStarHalf } from 'react-icons/im';
 import { Link } from 'react-router-dom';
 import { BsCart } from 'react-icons/bs';
 import { FiBarChart2 } from 'react-icons/fi';
 import { MdDone } from 'react-icons/md';
-import { useContext, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, } from "react";
 import { register } from "swiper/element/bundle";
-import { ProductContext } from '../contexts/ProductContextProvider';
+import { useGetproductsQuery } from '../future/productApi';
 
 register();
 
@@ -15,18 +14,13 @@ register();
 
 
 const SingleCard = () => {
-    const { products } = useContext(ProductContext)
-    const swiperRef = useRef(null);
 
-    // useEffect(() => {
-    //     fetch('fakedata.json')
-    //         .then(res => res.json())
-    //         .then(data => setProducts(data))
-    //     const m = products.filter(p => p.category === 'monitor')
-    //     const L = products.filter(p => p.category === 'laptop')
-    //     setMonitor(m)
-    //     setLaptops(L)
-    // }, [products])
+    const swiperRef = useRef(null);
+    const { data: products, error, isLoading } = useGetproductsQuery()
+    
+   
+
+
 
     useEffect(() => {
         const swiperContainer = swiperRef.current;
@@ -80,14 +74,21 @@ const SingleCard = () => {
         swiperContainer.initialize();
     }, []);
 
+    if (isLoading) {
+        <p>Loading cart...</p>
+    } else if (error) {
+        <p>Error: {error.message}</p>
+    }
+
+
     return (
         <>
             <swiper-container ref={swiperRef} init="false" className='flex flex-wrap py-6'>
-                {products.slice(0,10).map((products, idx) => <>
+                {products && products.slice(0, 10).map((products, idx) =>
                     <swiper-slide class="blue-slide " key={idx}>
                         <div className="group">
                             <div className="block  transition-all duration-300 md:p-6 p-2   group-hover:shadow-xl ">
-                                <div  className="p-6 ">
+                                <div className="p-6 ">
                                     <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />{products.status}</span>
                                     <Link to={`/products/${products.id}`} className='relative overflow-hidden'>
                                         <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={products.image} alt="" />
@@ -129,8 +130,11 @@ const SingleCard = () => {
 
                         </div>
                     </swiper-slide>
-                </>)}
+                )
+                }
             </swiper-container>
+
+
         </>
 
     );

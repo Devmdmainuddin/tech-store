@@ -3,10 +3,11 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 // Define your RTK Query API
 export const cartApi = createApi({
   reducerPath: 'cartApi',
-  baseQuery: fetchBaseQuery({ baseUrl: `${import.meta.env.VITE_API_URL}` }), 
+  baseQuery: fetchBaseQuery({ baseUrl: '/api' }), // Adjust base URL to match your backend
   endpoints: (builder) => ({
+    // Query to get the cart items for a specific user (by userEmail or userId)
     getCart: builder.query({
-      query: (userEmail) => `cart?userEmail=${userEmail}`, 
+      query: (userEmail) => `cart?userEmail=${userEmail}`, // Replace with actual backend logic
     }),
     addToCart: builder.mutation({
       query: (newProduct) => ({
@@ -31,13 +32,13 @@ export const cartApi = createApi({
     clearCart: builder.mutation({
       query: () => ({
         url: 'cart',
-        method: 'DELETE', // Assuming a DELETE request clears the cart
+        method: 'DELETE', // Assuming a DELETE request clears the entire cart
       }),
     }),
   }),
 });
 
-// Export hooks for each endpoint
+// Export the hook for getting the cart items
 export const { 
   useGetCartQuery, 
   useAddToCartMutation, 
