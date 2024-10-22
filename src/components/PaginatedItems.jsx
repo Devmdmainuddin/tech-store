@@ -48,7 +48,7 @@ function PaginatedItems({ itemsPerPage, item ,activeMulti ,setRangeData    }) {
     };
     useEffect(() => {
         setRangeData({ itemOffset, endOffset, totalItems: items?.length });
-    }, [itemOffset, endOffset, items,setRangeData]);
+    }, [itemOffset, endOffset, items]);
 
     return (
         <>

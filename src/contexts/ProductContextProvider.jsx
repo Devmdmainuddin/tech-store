@@ -11,13 +11,14 @@ const ProductContextProvider = ({ children }) => {
     const [menClothing, setMenClothing] = useState([]);
     const [womenClothing, setWomenClothing] = useState([]);
     const [electronics, setElectronics] = useState([]);
-    const axiosCommon = useAxiosCommon()
+    // const axiosCommon = useAxiosCommon()
 
     //  console.log(filteredProducts);
     // const filteredProducts = products.filter(product => product.category === "men's clothing" || products.category === "women's clothing")
     useEffect(() => {
         // fetch('http://localhost:4000/')
         fetch('https://fakestoreapi.com/products')
+        // fetch('https://dummyjson.com/products')
             .then((res) => res.json())
             .then((data) => {
                 setProduct(data)

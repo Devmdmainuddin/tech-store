@@ -15,38 +15,33 @@ import hewlett from '/hewlett.png'
 import gigabyte from '/gigabyte.png'
 import raccrt from '/raccrt.png'
 import Benefits from '../components/Benefits'
-import SingleCards from '../components/SingleCards';
 import { useLocation } from 'react-router-dom';
 import { useGetproductsQuery } from '../future/productApi';
-import Products from '../components/card/Products';
 import PaginatedItems from '../components/PaginatedItems';
 
 const Shop = () => {
-    // const [products, setProducts] = useState([])
-    // const { products } = useContext(ProductContext)
-    const [itemsperpage, setitemsperpage] = useState(6)
-    const [counts, setCounts] = useState(0)
     const [number, setNumber] = useState(12)
-    
-    const numberofPage = Math.ceil(counts / itemsperpage);
-    const [currentPage, setcurrentPage] = useState(0)
-    const pages = [...Array(numberofPage).keys()]
+    const [cetegorey, setCategorey] = useState([])
+    const [cetegoryShow, setCetegoryShow] = useState([])
+    const [brand, setBrand] = useState([])
+    const [brandShow, setBrandShow] = useState([])
+   
+    const [color, setcColor] = useState([])
+    const [priceShow, setShow] = useState([])
+  
+
     const [activeMulti, setActiveMulti] = useState(true)
     const { data, error, isLoading } = useGetproductsQuery();
     const [filteredItems, setFilteredItems] = useState(data);
-    const [rangeData, setRangeData] = useState({
-        itemOffset: 0,
-        endOffset: 0,
-        totalItems: filteredItems?.length,
-    });
+    const [rangeData, setRangeData] = useState({ itemOffset: 0,endOffset: 0,totalItems: filteredItems?.length,});
     const location = useLocation();
-
-    const getCategoryFromQuery = () => {
-        const params = new URLSearchParams(location.search);
-        return params.get('category');
-    };
-
+    // console.log(data);
     useEffect(() => {
+        const getCategoryFromQuery = () => {
+            const params = new URLSearchParams(location.search);
+            return params.get('category');
+        };
+    
         const category = getCategoryFromQuery();
         if (data) {
             if (category) {
@@ -57,6 +52,56 @@ const Shop = () => {
             }
         }
     }, [data, location]);
+    
+    useEffect(() => {
+        setCategorey([... new Set(data?.map(item => item.category))])
+        setBrand([... new Set(data?.map(item => item.brand))])
+        if (data) {
+            setFilteredItems(data); 
+          }
+    }, [data])
+    const handleCatfilter = filter => {
+        const filterItem = data?.filter(items => items.category === filter);
+        setFilteredItems(filterItem);
+     
+    }
+    const handlebrandfilter = filter => {
+        const filterItem = data?.filter(items => items.brand === filter);
+        setFilteredItems(filterItem);
+    }
+    const handlePricefilter = value => {
+        const filterItem = data?.filter(items => items.price > value.low && items.price < value.high);
+        if (filterItem.length > 0) {
+            setFilteredItems(filterItem);
+        } else {
+            setFilteredItems("")
+        }
+
+    }
+    //  onClick={() => handlePricefilter({ low: 0, high: 9.99 })}
+
+    const handleByNew = () => {
+        if (filteredItems && filteredItems.length > 0) {
+          const sortedByNew = [...filteredItems].sort((a, b) => {
+            const dateA = new Date(b.createAt);
+            const dateB = new Date(a.createAt);
+            return dateA - dateB;
+          });
+          setFilteredItems(sortedByNew);
+        }
+      };
+      
+      const handleByOld = () => {
+        if (filteredItems && filteredItems.length > 0) {
+          const sortedByOld = [...filteredItems].sort((a, b) => {
+            const dateA = new Date(b.createAt);
+            const dateB = new Date(a.createAt);
+            return dateB - dateA;
+          });
+          setFilteredItems(sortedByOld);
+        }
+      };
+
 
     // useEffect(() => {
     //     fetch('fakedata.json')
@@ -64,6 +109,7 @@ const Shop = () => {
     //         .then(data => setProducts(data))
 
     // }, [])
+
     const selectNumber = (element) => {
         let numberConverter = Number(element.target.value)
         setNumber(numberConverter)
@@ -74,22 +120,7 @@ const Shop = () => {
     }
 
 
-    const handlepre = () => {
-        if (currentPage > 0) {
-            setcurrentPage(currentPage - 1)
-        }
-    }
-    const handlenext = () => {
-        if (currentPage < pages.length - 1) {
-            setcurrentPage(currentPage + 1)
-        }
-    }
-
-    const handleItemsPerPage = e => {
-        const value = parseInt(e.target.value)
-        setitemsperpage(value)
-        setcurrentPage(0)
-    }
+  
     return (
         <div>
             <div className='max-w-[1398px] mx-auto'>
@@ -119,14 +150,16 @@ const Shop = () => {
 
                     <li><a className="text-sm font-medium text-indigo-500 hover:text-indigo-600" href="#">MSI WS Series</a></li>
                 </ul>
+
                 <h2 className="mb-5  text-3xl pt-[19px]  font-medium ">MSI PS Series (20)</h2>
                 {/* menu bar  */}
+              
                 <div className='flex flex-col md:flex-row justify-evenly items-center gap-5 mt-6'>
                     <div className='  py-3 sm:pr-7 mb-10 sm:mb-0 sm:w-1/2 lg:w-4/12 xl:w-3/12  '>
                         <p className='w-full flex gap-3 items-center'><FaArrowLeft />Back</p>
                     </div>
                     <div className='  py-3 px-9'>
-                    <p className='lg:text-xs lg:leading-7 leading-5 text-[#767676]'>Products from {rangeData.itemOffset + 1} to {rangeData.endOffset > filteredItems?.length ? filteredItems?.length : rangeData.endOffset} of {filteredItems?.length}</p>
+                        <p className='lg:text-xs lg:leading-7 leading-5 text-[#767676]'>Products from {rangeData.itemOffset + 1} to {rangeData.endOffset > filteredItems?.length ? filteredItems?.length : rangeData.endOffset} of {filteredItems?.length}</p>
                     </div>
                     <select
 
@@ -136,12 +169,7 @@ const Shop = () => {
                         className='border border-gray-200 hover:border-gray-300 rounded-4xl p-3'
                     >
                         <option value=''>Filter By Category</option>
-                        <option value='mobile'>mobile</option>
-                        <option value='clothing'>clothing</option>
-                        <option value='watches'>watches</option>
-                        <option value='furniture'>furniture</option>
-                        <option value='Laptop'>Laptop</option>
-                        <option value='Camera'>Camera</option>
+                   {cetegorey.map((item,idx)=><option onClick={()=>handleCatfilter(item)} key={idx} value=''>{item}</option>)}
                     </select>
 
 
@@ -321,7 +349,7 @@ const Shop = () => {
                     <div className="w-full sm:w-1/2 lg:w-8/12 xl:w-9/12 sm:pl-7">
                         {
                             activeMulti ?
-                                <div className="flex flex-wrap justify-between gap-16 mt-[60px]">
+                                <div className="flex flex-wrap justify-between gap-6 mt-[60px]">
                                     <PaginatedItems item={filteredItems} activeMulti={activeMulti} setRangeData={setRangeData} itemsPerPage={number}></PaginatedItems>
                                 </div>
                                 :

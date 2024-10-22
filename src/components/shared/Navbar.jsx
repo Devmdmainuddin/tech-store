@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { BsCart3 } from "react-icons/bs";
 import { FaSearch } from "react-icons/fa";
@@ -8,7 +8,7 @@ import logo from '/logo.png'
 import { GrEdit } from "react-icons/gr";
 import { IoMdClose } from "react-icons/io";
 import useAuth from '../../hooks/useAuth';
-import { useGetproductsQuery } from '../../future/productApi';
+
 import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {

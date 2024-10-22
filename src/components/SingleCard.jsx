@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { BsCart } from 'react-icons/bs';
 import { FiBarChart2 } from 'react-icons/fi';
 import { MdDone } from 'react-icons/md';
-import { useEffect, useRef, useState, } from "react";
+import { useEffect, useRef,  } from "react";
 import { register } from "swiper/element/bundle";
 import { useGetproductsQuery } from '../future/productApi';
 
@@ -46,8 +46,7 @@ const SingleCard = () => {
                     spaceBetween: 10,
                 },
             },
-            // spaceBetween:30,
-            // These are new...
+    
             injectStyles: [
                 `
               .swiper-button-next,

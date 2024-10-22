@@ -4,6 +4,7 @@ import { FiBarChart2 } from "react-icons/fi";
 import { ImStarHalf } from "react-icons/im";
 import { MdDone } from "react-icons/md";
 import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 
 const Products = ({ product }) => {
