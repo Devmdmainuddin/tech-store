@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const Products = ({ product }) => {
     return (
-        <div className="w-[370px]">
+        <div className="w-[234px]">
             <div className="block p-px group ">
                 <div className=" p-6 transition-all duration-300  group-hover:shadow-xl">
                     <span className=' flex gap-1 items-center text-[12px] text-[#78A962] mb-3'><MdDone className='bg-[#78A962] text-white p-1 rounded-full text-sm' />{product.status}</span>
