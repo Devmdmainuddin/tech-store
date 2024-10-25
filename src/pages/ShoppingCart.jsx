@@ -2,13 +2,27 @@ import { IoIosArrowForward, IoIosArrowUp } from "react-icons/io";
 import { Link } from "react-router-dom";
 import zip from '/zip.png'
 import { RiDeleteBinLine } from "react-icons/ri";
-import { FaRegEdit } from "react-icons/fa";
+import { FaMinus, FaPlus, FaRegEdit } from "react-icons/fa";
 import Benefits from "../components/Benefits";
 import { useDispatch, useSelector } from "react-redux";
+import { changeQuantity } from "../redux/state/cartSlice";
 
 const ShoppingCart = () => {
     const carts = useSelector((state) => state.cart.cartItem)
     const dispatch = useDispatch();
+
+    const handkeMinusQuantity = (items, quantity) => {
+        dispatch(changeQuantity({ ...items, qun: quantity - 1, }))
+    }
+    const handkePlusQuantity = (items, quantity) => {
+        dispatch(changeQuantity({ ...items, qun: quantity + 1, }))
+    }
+    let { totalprice, totalQuntity } = carts.reduce((acc, item) => {
+        acc.totalprice += item.price * item.qun
+        acc.totalQuntity += item.qun
+        return acc
+    }, { totalprice: 0, totalQuntity: 0 })
+
     return (
         <>
         <div className="max-w-[1398px] mx-auto px-6">
@@ -83,7 +97,21 @@ const ShoppingCart = () => {
                                 </td>
 
                                 <td className='px-5 py-5 border-b border-gray-200  text-sm'>
-                                    <span className="text-lg  bg-[#F5F7FF] p-3 rounded-lg  font-body">{item.qun}</span>
+                                <div className="w-[139px]   border border-[#F0F0F0] text-[#767676] flex justify-between items-center p-3">
+                                                    <span
+                                                        className="cursor-pointer inline-block   text-lg font-normal "
+                                                        onClick={() => handkeMinusQuantity(item, item.qun)}
+                                                    >
+                                                        <FaMinus />
+                                                    </span>
+                                                    <span className="inline-block px-2 text-lg font-normal">{item.qun}</span>
+                                                    <span
+                                                        className="cursor-pointer inline-block  text-lg "
+                                                        onClick={() => handkePlusQuantity(item, item.qun)}
+                                                    >
+                                                        <FaPlus />
+                                                    </span>
+                                                </div>
 
                                 </td>
                                 <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
@@ -183,7 +211,7 @@ const ShoppingCart = () => {
                     <div className="divider"></div>
                     <div className="flex justify-between text-[13px] font-semibold">
                         <p>Subtotal</p>
-                        <span>$13,047.00</span>
+                        <span>${parseFloat(totalprice?.toFixed(2))}</span>
                     </div>
                     <div className="flex justify-between text-[13px] font-semibold mt-3">
                         <p>Shipping </p>
@@ -200,7 +228,7 @@ const ShoppingCart = () => {
                     </div>
                     <div className="flex justify-between text-[13px] font-semibold mt-3">
                         <p>Order Total</p>
-                        <span>$13,068.00</span>
+                        <span>${totalprice +21.00 +1.91 + 1.91 }</span>
                     </div>
 
                     <Link className="W-full mt-4 block py-3 px-10  text-[14px]  text-white font-semibold text-center bg-[#0156FF]   rounded-full" href="#">Proceed to Checkout</Link>

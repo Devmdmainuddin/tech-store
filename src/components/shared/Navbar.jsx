@@ -1,7 +1,7 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { BsCart3 } from "react-icons/bs";
-import { FaSearch } from "react-icons/fa";
+import { FaMinus, FaPlus, FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import avatarImg from '../../assets/user-profile.png'
 import logo from '/logo.png'
@@ -12,7 +12,7 @@ import useAuth from '../../hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
 import { ProductContext } from "../../contexts/ProductContextProvider";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteItem } from "../../redux/state/cartSlice";
+import { changeQuantity, deleteItem } from "../../redux/state/cartSlice";
 
 const Navbar = () => {
     const { user, logOut } = useAuth()
@@ -22,13 +22,26 @@ const Navbar = () => {
     const [usemenuOpen, setusemenuOpen] = useState(false)
     const { categorys } = useContext(ProductContext)
     const carts = useSelector((state) => state.cart.cartItem)
+    let [totalPrice, setTotalPrice] = useState(0);
     const dispatch = useDispatch();
     const handleCategoryFilter = (category) => {
         navigate(`/all-products?category=${encodeURIComponent(category)}`);
     };
 
-    const handleDelete = id =>{
+    const handleDelete = id => {
         dispatch(deleteItem(id));
+    }
+
+    useEffect(() => {
+        const cartTotal = carts.reduce((acc, items) => acc + parseInt(items.price * items.qun), 0)
+        setTotalPrice(cartTotal)
+
+    }, [carts,])
+    const handkeMinusQuantity = (items, quantity) => {
+        dispatch(changeQuantity({ ...items, qun: quantity - 1, }))
+    }
+    const handkePlusQuantity = (items, quantity) => {
+        dispatch(changeQuantity({ ...items, qun: quantity + 1, }))
     }
 
     return (
@@ -36,8 +49,8 @@ const Navbar = () => {
             <nav className="relative max-w-[1398px] mx-auto py-6  flex justify-between items-center ">
                 <Link><img src={logo} alt="" /></Link>
                 <ul className="hidden lg:flex gap-6 items-center">
-                    {categorys.map((item,idx) => <li key={idx} onClick={() => handleCategoryFilter(item)}><Link>{item}</Link></li>)}
-                    
+                    {categorys.map((item, idx) => <li key={idx} onClick={() => handleCategoryFilter(item)}><Link>{item}</Link></li>)}
+
                     <li ><Link to='/all-products'>All Other Products</Link></li>
                     <li><Link>Repairs</Link></li>
                     <li><Link className="py-2 px-6 rounded-full border-2 border-[#0156FF] text-[#0156FF]">Our Deals</Link></li>
@@ -73,9 +86,24 @@ const Navbar = () => {
                             <div className='divider'></div>
                             <div className="mt-4 space-y-6">
                                 <ul className="space-y-4">
-                                {carts.map((item,idx) => <li key={idx} className="flex items-center gap-4">
-                                        <div className='flex-1'>
-                                            <h3 className="flex gap-1 text-sm text-gray-900"><span>{item.qun}</span> x</h3>
+                                    {carts.map((item, idx) => <li key={idx} className="flex items-center gap-4">
+                                        <div className='flex-1 flex gap-1 items-center'>
+                                            
+                                           
+                                                <span
+                                                    className="cursor-pointer inline-block text-sm text-gray-900   font-normal "
+                                                    onClick={() => handkeMinusQuantity(item, item.qun)}
+                                                >
+                                                    <FaMinus />
+                                                </span>
+                                                <span className="inline-block px-2 text-sm text-gray-900 font-normal">{item.qun}</span>
+                                                <span
+                                                    className="cursor-pointer inline-block  text-sm text-gray-900 "
+                                                    onClick={() => handkePlusQuantity(item, item.qun)}
+                                                >
+                                                    <FaPlus />
+                                                </span>
+                                          
                                         </div>
                                         <img
                                             src={item.image}
@@ -89,18 +117,18 @@ const Navbar = () => {
 
                                         <div className="flex flex-1 flex-col items-end  gap-1">
                                             <button >
-                                                <IoMdClose onClick={()=>handleDelete(item.id)} className='p-1 rounded-full border text-xl transition text-gray-600 hover:text-red-600 border-gray-600 hover:border-red-600' />
+                                                <IoMdClose onClick={() => handleDelete(item.id)} className='p-1 rounded-full border text-xl transition text-gray-600 hover:text-red-600 border-gray-600 hover:border-red-600' />
                                             </button>
                                             <button >
                                                 <GrEdit className='p-1 rounded-full border text-xl transition text-gray-600 hover:text-[#0156FF] border-gray-600 hover:border-[#0156FF]' />
                                             </button>
                                         </div>
                                     </li>)}
-                                    
+
 
                                     <div className='divider'></div>
                                 </ul>
-                                <h2 className='text-center text-[13px]'>Subtotal: <span className='font-semibold text-[18px]'>$499.00</span> </h2>
+                                <h2 className='text-center text-[13px]'>Subtotal: <span className='font-semibold text-[18px]'>${totalPrice}</span> </h2>
 
                                 <div className="space-y-4 text-center">
 
