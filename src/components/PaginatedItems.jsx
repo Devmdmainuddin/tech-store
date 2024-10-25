@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import PropTypes from 'prop-types';
-import Products from '../components/card/Products';
+// import Products from '../components/card/Products';
 import SingleCards from './SingleCards';
+import Products01 from './card/Products01';
 
 
 // Helper function to calculate and return the product range text
@@ -21,7 +22,7 @@ function Items({ currentItems, activeMulti }) {
 
                     <div key={key}>
                         {activeMulti ? (
-                            <Products product={item}></Products>
+                            <Products01 item={item}></Products01>
                         ) : (
                             <SingleCards product={item}></SingleCards>
                         )}

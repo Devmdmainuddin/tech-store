@@ -1,6 +1,4 @@
 import { createContext, useEffect, useState } from "react";
-import useAxiosCommon from "../hooks/useAxiosCommon";
-import axios from "axios";
 import PropTypes from 'prop-types';
 
 
@@ -16,9 +14,6 @@ const ProductContextProvider = ({ children }) => {
     const [customBuilds, setCustomBuilds] = useState([]);
 
     useEffect(() => {
-       
-        // fetch('https://fakestoreapi.com/products')
-        // fetch('https://dummyjson.com/products')
         fetch('fakedata.json')
             .then((res) => res.json())
             .then((data) => {
@@ -37,9 +32,8 @@ const ProductContextProvider = ({ children }) => {
 
             })
     }, [])
-    console.log(categorys);
     return (
-        <ProductContext.Provider value={{ products,categorys,mobiles,laptops, desktops, monitors,customBuilds }}> {children} </ProductContext.Provider>
+        <ProductContext.Provider value={{ products, categorys, mobiles, laptops, desktops, monitors, customBuilds }}> {children} </ProductContext.Provider>
     );
 };
 ProductContextProvider.propTypes = {

@@ -4,8 +4,11 @@ import zip from '/zip.png'
 import { RiDeleteBinLine } from "react-icons/ri";
 import { FaRegEdit } from "react-icons/fa";
 import Benefits from "../components/Benefits";
+import { useDispatch, useSelector } from "react-redux";
 
 const ShoppingCart = () => {
+    const carts = useSelector((state) => state.cart.cartItem)
+    const dispatch = useDispatch();
     return (
         <>
         <div className="max-w-[1398px] mx-auto px-6">
@@ -70,21 +73,21 @@ const ShoppingCart = () => {
                             </tr>
                         </thead>
                         <tbody>{/* User data table row */}
-                            <tr>
-                                <td className='px-5 py-5 border-b border-gray-200 text-sm flex items-center gap-6'>
-                                    <img className="w-[120px] h-[120px] object-cover" src="https://i.ibb.co/SBpL1cK/pexels-aleksandar-pasaric-325185-1.png" alt="" />
+                            {carts.map((item,idx)=><tr key={idx}>
+                                <td  className='px-5 py-5 border-b border-gray-200 text-sm flex items-center gap-6'>
+                                    <img className="w-[120px] h-[120px] object-cover" src={item.image} alt="" />
                                     <p className='text-gray-900 whitespace-no-wrap w-[270px]'>MSI MEG Trident X 10SD-1012AU Intel i7 10700K, 2070 SUPER, 32GB RAM, 1TB SSD, Windows 10 Home, Gaming Keyboard and Mouse 3 Years Warranty</p>
                                 </td>
                                 <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                                    <p className='text-gray-900 whitespace-no-wrap'>$4,349.00</p>
+                                    <p className='text-gray-900 whitespace-no-wrap'>${item.price}</p>
                                 </td>
 
                                 <td className='px-5 py-5 border-b border-gray-200  text-sm'>
-                                    <span className="text-lg  bg-[#F5F7FF] p-3 rounded-lg  font-body">1</span>
+                                    <span className="text-lg  bg-[#F5F7FF] p-3 rounded-lg  font-body">{item.qun}</span>
 
                                 </td>
                                 <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                                    <p className='text-gray-900 whitespace-no-wrap'>$13,047.00</p>
+                                    <p className='text-gray-900 whitespace-no-wrap'>${item.price * item.qun}</p>
                                 </td>
 
 
@@ -100,67 +103,8 @@ const ShoppingCart = () => {
 
 
                                 </td>
-                            </tr>
-                            <tr>
-                                <td className='px-5 py-5 border-b border-gray-200 text-sm flex items-center gap-6'>
-                                    <img className="w-[120px] h-[120px] object-cover" src="https://i.ibb.co/SBpL1cK/pexels-aleksandar-pasaric-325185-1.png" alt="" />
-                                    <p className='text-gray-900 whitespace-no-wrap w-[270px]'>MSI MEG Trident X 10SD-1012AU Intel i7 10700K, 2070 SUPER, 32GB RAM, 1TB SSD, Windows 10 Home, Gaming Keyboard and Mouse 3 Years Warranty</p>
-                                </td>
-                                <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                                    <p className='text-gray-900 whitespace-no-wrap'>$4,349.00</p>
-                                </td>
-
-                                <td className='px-5 py-5 border-b border-gray-200  text-sm'>
-                                    <span className="text-lg  bg-[#F5F7FF] p-3 rounded-lg  font-body">1</span>
-                                </td>
-                                <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                                    <p className='text-gray-900 whitespace-no-wrap'>$13,047.00</p>
-                                </td>
-
-
-                                <td className='p-2 border-b border-gray-200 text-sm '>
-                                    <div className="flex items-center gap-2">
-                                        <button className='cursor-pointer inline-block p-3  bg-red-100  rounded-full font-semibold text-red-900 leading-tight'>
-                                            <RiDeleteBinLine />
-                                        </button>
-                                        <Link className='cursor-pointer inline-block p-3  bg-green-100   rounded-full font-semibold text-red-900 leading-tight'>
-                                            <FaRegEdit />
-                                        </Link>
-                                    </div>
-
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td className='px-5 py-5 border-b border-gray-200 text-sm flex items-center gap-6'>
-                                    <img className="w-[120px] h-[120px] object-cover" src="https://i.ibb.co/SBpL1cK/pexels-aleksandar-pasaric-325185-1.png" alt="" />
-                                    <p className='text-gray-900 whitespace-no-wrap w-[270px]'>MSI MEG Trident X 10SD-1012AU Intel i7 10700K, 2070 SUPER, 32GB RAM, 1TB SSD, Windows 10 Home, Gaming Keyboard and Mouse 3 Years Warranty</p>
-                                </td>
-                                <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                                    <p className='text-gray-900 whitespace-no-wrap'>$4,349.00</p>
-                                </td>
-
-                                <td className='px-5 py-5 border-b border-gray-200  text-sm'>
-                                    <span className="text-lg  bg-[#F5F7FF] p-3 rounded-lg  font-body">1</span>
-                                </td>
-                                <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                                    <p className='text-gray-900 whitespace-no-wrap'>$13,047.00</p>
-                                </td>
-
-
-                                <td className='p-2 border-b border-gray-200 text-sm '>
-                                    <div className="flex items-center gap-2">
-                                        <button className='cursor-pointer inline-block p-3  bg-red-100  rounded-full font-semibold text-red-900 leading-tight'>
-                                            <RiDeleteBinLine />
-                                        </button>
-                                        <Link className='cursor-pointer inline-block p-3  bg-green-100   rounded-full font-semibold text-red-900 leading-tight'>
-                                            <FaRegEdit />
-                                        </Link>
-                                    </div>
-
-
-                                </td>
-                            </tr>
+                            </tr> )}
+                           
 
 
                         </tbody>

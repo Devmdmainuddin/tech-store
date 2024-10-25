@@ -2,7 +2,7 @@
 import { FaArrowLeft } from 'react-icons/fa';
 import banner from '/banner.jpg'
 import bannerl from '/banner-2.jpg'
-import {  IoIosArrowUp } from 'react-icons/io';
+import { IoIosArrowUp } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
 import { CgMenuGridR } from 'react-icons/cg';
@@ -23,26 +23,18 @@ import { ProductContext } from '../contexts/ProductContextProvider';
 
 const Shop = () => {
     const [number, setNumber] = useState(12)
-    const [cetegorey, setCategorey] = useState([])
-    const [cetegoryShow, setCetegoryShow] = useState([])
     const [brand, setBrand] = useState([])
-    const [brandShow, setBrandShow] = useState([])
-    const [color, setcColor] = useState([])
-    const [priceShow, setShow] = useState([])
-
-
     const [activeMulti, setActiveMulti] = useState(true)
-    const { products } = useContext(ProductContext)
+    const { products, categorys } = useContext(ProductContext)
     const [filteredItems, setFilteredItems] = useState(products);
     const [rangeData, setRangeData] = useState({ itemOffset: 0, endOffset: 0, totalItems: filteredItems?.length, });
     const location = useLocation();
-    
+
     useEffect(() => {
         const getCategoryFromQuery = () => {
             const params = new URLSearchParams(location.search);
             return params.get('category');
         };
-
         const category = getCategoryFromQuery();
         if (products) {
             if (category) {
@@ -55,12 +47,12 @@ const Shop = () => {
     }, [products, location]);
 
     useEffect(() => {
-        setCategorey([... new Set(products?.map(item => item.category))])
         setBrand([... new Set(products?.map(item => item.brand))])
         if (products) {
             setFilteredItems(products);
         }
     }, [products])
+
     const handleCatfilter = filter => {
         const filterItem = products?.filter(items => items.category === filter);
         setFilteredItems(filterItem);
@@ -79,38 +71,7 @@ const Shop = () => {
         }
 
     }
-    //  onClick={() => handlePricefilter({ low: 0, high: 9.99 })}
-
-    const handleByNew = () => {
-        if (filteredItems && filteredItems.length > 0) {
-            const sortedByNew = [...filteredItems].sort((a, b) => {
-                const dateA = new Date(b.createAt);
-                const dateB = new Date(a.createAt);
-                return dateA - dateB;
-            });
-            setFilteredItems(sortedByNew);
-        }
-    };
-
-    const handleByOld = () => {
-        if (filteredItems && filteredItems.length > 0) {
-            const sortedByOld = [...filteredItems].sort((a, b) => {
-                const dateA = new Date(b.createAt);
-                const dateB = new Date(a.createAt);
-                return dateB - dateA;
-            });
-            setFilteredItems(sortedByOld);
-        }
-    };
-
-
-    // useEffect(() => {
-    //     fetch('fakedata.json')
-    //         .then(res => res.json())
-    //         .then(data => setProducts(data))
-
-    // }, [])
-
+    
     const selectNumber = (element) => {
         let numberConverter = Number(element.target.value)
         setNumber(numberConverter)
@@ -120,6 +81,16 @@ const Shop = () => {
         setFilteredItems(products)
     }
 
+    const sortItems = (order) => {
+        if (filteredItems && filteredItems.length > 0) {
+            const sortedItems = [...filteredItems].sort((a, b) => {
+                const dateA = new Date(a.createdAt);
+                const dateB = new Date(b.createdAt);
+                return order === 'dsc' ? dateB - dateA : dateA - dateB;
+            });
+            setFilteredItems(sortedItems);
+        }
+    };
 
 
     return (
@@ -144,26 +115,27 @@ const Shop = () => {
                         </div>
                         <select
 
-
+                            onChange={(e) => handleCatfilter(e.target.value)}
                             name='queryTitle'
                             id='queryTitle'
                             className='border border-gray-200 hover:border-gray-300 rounded-4xl p-3'
                         >
                             <option value=''>Filter By Category</option>
-                            {cetegorey.map((item, idx) => <option onClick={() => handleCatfilter(item)} key={idx} value=''>{item}</option>)}
+                            {categorys.map((item, idx) => <option key={idx} value={item}>{item}</option>)}
                         </select>
 
 
 
                         <select
-
+                        onChange={(e) => sortItems(e.target.value)}
+                            // onChange={(e) => handleSortChange(e.target.value)}
                             name='sort'
                             id='sort'
                             className='border border-gray-200 hover:border-gray-300 rounded-4xl p-3'
                         >
                             <option value=''>Sort By Deadline</option>
-                            <option onClick={handleByNew} value='dsc'>Descending Order</option>
-                            <option onClick={handleByOld} value='asc'>Ascending Order</option>
+                            <option  value='dsc'>Descending Order</option>
+                            <option  value='asc'>Ascending Order</option>
                         </select>
                         <select onChange={selectNumber} name="" id="" className='border border-gray-200 hover:border-gray-300 rounded-4xl p-3'>
 
@@ -208,7 +180,7 @@ const Shop = () => {
 
                                                 <IoIosArrowUp />
                                             </summary>
-                                            {cetegorey.map((item, idx) => <div onClick={() => handleCatfilter(item)} key={idx} className='flex justify-between mt-4 px-4 leading-relaxed text-[13px] font-normal'>
+                                            {categorys.map((item, idx) => <div onClick={() => handleCatfilter(item)} key={idx} className='flex justify-between mt-4 px-4 leading-relaxed text-[13px] font-normal cursor-pointer'>
                                                 <p>{item}</p>
                                             </div>)}
 
@@ -223,26 +195,26 @@ const Shop = () => {
                                                 <IoIosArrowUp />
                                             </summary>
 
-                                            <div onClick={() => handlePricefilter({ low: 0, high: 29 })} className='flex justify-between mt-4 px-4 leading-relaxed text-[13px] font-normal'>
-                                                <p>$0.00 - $29</p> <span>22</span>
+                                            <div onClick={() => handlePricefilter({ low: 0, high: 499 })} className='flex justify-between mt-4 px-4 leading-relaxed text-[13px] font-normal'>
+                                                <p>$0.00 - $499</p> <span>22</span>
                                             </div>
-                                            <div onClick={() => handlePricefilter({ low: 30, high: 59 })} className='flex justify-between mt-4 px-4 leading-relaxed text-[13px] font-normal'>
-                                                <p>$30 - $59</p> <span>11</span>
+                                            <div onClick={() => handlePricefilter({ low: 500, high: 999 })} className='flex justify-between mt-4 px-4 leading-relaxed text-[13px] font-normal'>
+                                                <p>$500 - $999</p> <span>11</span>
                                             </div>
-                                            <div onClick={() => handlePricefilter({ low: 60, high: 99 })} className='flex justify-between mt-4 px-4 leading-relaxed text-[13px] font-normal'>
-                                                <p> $60 - $99</p> <span>10</span>
+                                            <div onClick={() => handlePricefilter({ low: 1000, high: 1499 })} className='flex justify-between mt-4 px-4 leading-relaxed text-[13px] font-normal'>
+                                                <p> $1000 - $1499</p> <span>10</span>
                                             </div>
-                                            <div onClick={() => handlePricefilter({ low: 100, high: 149 })} className='flex justify-between mt-4 px-4 leading-relaxed text-[13px] font-normal'>
-                                                <p>$100 - $149</p> <span>22</span>
+                                            <div onClick={() => handlePricefilter({ low: 1500, high: 1999 })} className='flex justify-between mt-4 px-4 leading-relaxed text-[13px] font-normal'>
+                                                <p>$1500 - $1999</p> <span>22</span>
                                             </div>
-                                            <div onClick={() => handlePricefilter({ low: 150, high: 199 })} className='flex justify-between mt-4 px-4 leading-relaxed text-[13px] font-normal'>
-                                                <p>$150 - $199</p> <span>11</span>
+                                            <div onClick={() => handlePricefilter({ low: 2000, high: 2499 })} className='flex justify-between mt-4 px-4 leading-relaxed text-[13px] font-normal'>
+                                                <p>$2000 - $2499</p> <span>11</span>
                                             </div>
-                                            <div onClick={() => handlePricefilter({ low: 200, high: 249 })} className='flex justify-between mt-4 px-4 leading-relaxed text-[13px] font-normal'>
-                                                <p>$200 - $249</p> <span>10</span>
+                                            <div onClick={() => handlePricefilter({ low: 2500, high: 2999 })} className='flex justify-between mt-4 px-4 leading-relaxed text-[13px] font-normal'>
+                                                <p>$2500 - $2999</p> <span>10</span>
                                             </div>
-                                            <div onClick={() => handlePricefilter({ low: 250, high: 300 })} className='flex justify-between mt-4 px-4 leading-relaxed text-[13px] font-normal'>
-                                                <p>$250 - $300</p> <span>10</span>
+                                            <div onClick={() => handlePricefilter({ low: 3000, high: 3499 })} className='flex justify-between mt-4 px-4 leading-relaxed text-[13px] font-normal'>
+                                                <p>$3000 - $3499</p> <span>10</span>
                                             </div>
 
 
@@ -298,11 +270,11 @@ const Shop = () => {
 
                                     <div className="max-w-[1398px] mx-auto  my-8 grid grid-cols-2 gap-4">
                                         <div onClick={() => handleAllProduct} className='hover:shadow-xl transition-all duration-300'> <img className='px-1 w-[88px] h-[46px]' src={msi} alt="" /></div>
-                                        <div onClick={() => handlebrandfilter('raz')} className='hover:shadow-xl transition-all duration-300'> <img className='px-1 w-[88px] h-[46px]' src={raz} alt="" /></div>
-                                        <div onClick={() => handlebrandfilter('thermaltake')} className='hover:shadow-xl transition-all duration-300'> <img className='px-1 w-[88px] h-[46px]' src={thermaltake} alt="" /></div>
-                                        <div onClick={() => handlebrandfilter('adata')} className='hover:shadow-xl transition-all duration-300'> <img className='px-1 w-[88px] h-[46px]' src={adata} alt="" /></div>
-                                        <div onClick={() => handlebrandfilter('hewlett')} className='hover:shadow-xl transition-all duration-300'> <img className='px-1 w-[88px] h-[46px]' src={hewlett} alt="" /></div>
-                                        <div onClick={() => handlebrandfilter('gigabyte')} className='hover:shadow-xl transition-all duration-300'> <img className='px-1 w-[88px] h-[46px]' src={gigabyte} alt="" /></div>
+                                        <div onClick={() => handlebrandfilter('HyperScreen')} className='hover:shadow-xl transition-all duration-300'> <img className='px-1 w-[88px] h-[46px]' src={raz} alt="" /></div>
+                                        <div onClick={() => handlebrandfilter('TechBrand')} className='hover:shadow-xl transition-all duration-300'> <img className='px-1 w-[88px] h-[46px]' src={thermaltake} alt="" /></div>
+                                        <div onClick={() => handlebrandfilter('SmartTech')} className='hover:shadow-xl transition-all duration-300'> <img className='px-1 w-[88px] h-[46px]' src={adata} alt="" /></div>
+                                        <div onClick={() => handlebrandfilter('GamerTech')} className='hover:shadow-xl transition-all duration-300'> <img className='px-1 w-[88px] h-[46px]' src={hewlett} alt="" /></div>
+                                        <div onClick={() => handlebrandfilter('OfficeTech')} className='hover:shadow-xl transition-all duration-300'> <img className='px-1 w-[88px] h-[46px]' src={gigabyte} alt="" /></div>
                                         <div onClick={() => handlebrandfilter('raccrt')} className='hover:shadow-xl transition-all duration-300'> <img className='px-1 w-[88px] h-[46px]' src={raccrt} alt="" /></div>
                                     </div>
 
@@ -325,26 +297,25 @@ const Shop = () => {
 
                         {/*  main  */}
                         <div className="w-full ">
-                            {
-                                activeMulti ?
-                                    <div className="flex flex-wrap  mt-[60px]">
-                                        <PaginatedItems item={filteredItems} activeMulti={activeMulti} setRangeData={setRangeData} itemsPerPage={number}></PaginatedItems>
-                                    </div>
-                                    :
-                                    <div className=" grid grid-cols-1">
-                                        <PaginatedItems item={filteredItems} activeMulti={activeMulti} itemsPerPage={number}></PaginatedItems>
-                                    </div>
-                            }
+                            {filteredItems ? activeMulti ?
+                                <div className="flex flex-wrap  mt-[60px]">
+                                    <PaginatedItems item={filteredItems} activeMulti={activeMulti} setRangeData={setRangeData} itemsPerPage={number}></PaginatedItems>
+                                </div>
+                                :
+                                <div className=" grid grid-cols-1">
+                                    <PaginatedItems item={filteredItems} activeMulti={activeMulti} itemsPerPage={number}></PaginatedItems>
+                                </div> : <div className='flex items-center justify-center h-screen'><p >no product </p> </div>}
+
                         </div>
                     </div>
                 </div>
 
 
-                <div className='bg-slate-100'>
-                    <Benefits></Benefits>
-                </div>
-            </Container>
 
+            </Container>
+            <div className='bg-slate-100'>
+                <Benefits></Benefits>
+            </div>
 
         </div>
     );
