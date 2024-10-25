@@ -19,10 +19,10 @@ const ProductsDetails = () => {
             <div className="flex justify-between max-w-[1398px] mx-auto px-6">
                 <div className='w-1/2'>
                     <Tabs >
-                        <TabList>
-                            <Tab>About Product</Tab>
-                            <Tab>Details</Tab>
-                            <Tab>Specs</Tab>
+                        <TabList className='flex gap-6'>
+                            <Tab className='border-none '>About Product</Tab>
+                            <Tab className='border-none' >Details</Tab>
+                            <Tab className='border-none'>Specs</Tab>
 
                         </TabList>
 

@@ -27,9 +27,9 @@ const DetailsPageImage = ({src}) => {
                         <div className='relative overflow-hidden p-6 transition-all duration-300  '>
                             <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={src} alt="" />
                             <div className='absolute top-0 left-10  '>
-                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full hover:scale-110' />
-                                <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1 hover:scale-110' />
-                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1 hover:scale-110' />
+                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full hover:scale-110 hover:text-[#0156FF] hover:border-[#0156FF] transition-all duration-300' />
+                                <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1 hover:scale-110 hover:text-[#0156FF] hover:border-[#0156FF] transition-all duration-300' />
+                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1 hover:scale-110 hover:text-[#0156FF] hover:border-[#0156FF] transition-all duration-300' />
                             </div>
 
                         </div>
@@ -44,9 +44,9 @@ const DetailsPageImage = ({src}) => {
                         <div className='relative overflow-hidden p-6 transition-all duration-300  '>
                             <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={src} alt="" />
                             <div className='absolute top-0 left-10  '>
-                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full hover:scale-110' />
-                                <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1 hover:scale-110' />
-                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1 hover:scale-110' />
+                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full hover:scale-110 hover:text-[#0156FF] hover:border-[#0156FF] transition-all duration-300' />
+                                <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1 hover:scale-110 hover:text-[#0156FF] hover:border-[#0156FF] transition-all duration-300' />
+                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1 hover:scale-110 hover:text-[#0156FF] hover:border-[#0156FF] transition-all duration-300' />
                             </div>
 
                         </div>
@@ -61,9 +61,9 @@ const DetailsPageImage = ({src}) => {
                         <div className='relative overflow-hidden p-6 transition-all duration-300  '>
                             <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={src} alt="" />
                             <div className='absolute top-0 left-10  '>
-                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full hover:scale-110' />
-                                <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1 hover:scale-110' />
-                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1 hover:scale-110' />
+                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full hover:scale-110 hover:text-[#0156FF] hover:border-[#0156FF] transition-all duration-300' />
+                                <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1 hover:scale-110 hover:text-[#0156FF] hover:border-[#0156FF] transition-all duration-300' />
+                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1 hover:scale-110 hover:text-[#0156FF] hover:border-[#0156FF] transition-all duration-300' />
                             </div>
 
                         </div>
@@ -78,9 +78,9 @@ const DetailsPageImage = ({src}) => {
                         <div className='relative overflow-hidden p-6 transition-all duration-300  '>
                             <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={src} alt="" />
                             <div className='absolute top-0 left-10  '>
-                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full hover:scale-110' />
-                                <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1 hover:scale-110' />
-                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1 hover:scale-110' />
+                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full hover:scale-110 hover:text-[#0156FF] hover:border-[#0156FF] transition-all duration-300' />
+                                <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1 hover:scale-110 hover:text-[#0156FF] hover:border-[#0156FF] transition-all duration-300' />
+                                <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1 hover:scale-110 hover:text-[#0156FF] hover:border-[#0156FF] transition-all duration-300' />
                             </div>
 
                         </div>

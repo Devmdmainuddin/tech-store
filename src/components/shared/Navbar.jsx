@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { BsCart3 } from "react-icons/bs";
 import { FaSearch } from "react-icons/fa";
@@ -10,6 +10,7 @@ import { IoMdClose } from "react-icons/io";
 import useAuth from '../../hooks/useAuth';
 
 import { useNavigate } from 'react-router-dom';
+import { ProductContext } from "../../contexts/ProductContextProvider";
 
 const Navbar = () => {
     const { user, logOut } = useAuth()
@@ -17,7 +18,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
     const [cartOpen, setCartOpen] = useState(false)
     const [usemenuOpen, setusemenuOpen] = useState(false)
-    
+    const { categorys } = useContext(ProductContext)
      const handleCategoryFilter = (category) => {
         navigate(`/all-products?category=${encodeURIComponent(category)}`);
       };
@@ -29,6 +30,7 @@ const Navbar = () => {
             <nav className="relative max-w-[1398px] mx-auto py-6  flex justify-between items-center ">
                 <Link><img src={logo} alt="" /></Link>
                 <ul className="hidden lg:flex gap-6 items-center">
+{categorys.map(item=>)}
                     <li onClick={()=>handleCategoryFilter("men's clothing")}><Link>men{`'`}s clothing</Link></li>
                     <li onClick={()=>handleCategoryFilter("jewelery")}><Link>jewelery</Link></li>
                     <li onClick={()=>handleCategoryFilter("electronics")}><Link>electronics</Link></li>

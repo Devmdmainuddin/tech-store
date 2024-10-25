@@ -6,22 +6,19 @@ import { ImStarHalf } from "react-icons/im";
 import { FiBarChart2 } from "react-icons/fi";
 import { MdDone } from "react-icons/md";
 import 'react-tabs/style/react-tabs.css';
-import monitor from '/monitor.jpg'
 import zip from '/zip.png'
-import { BsCart } from "react-icons/bs";
 import Partnar from "../components/Partnar";
 import Blogs from "../components/Blogs";
 import Testimonials from "../components/Testimonials";
 import Benefits from "../components/Benefits";
-import { useContext } from "react";
-import { ProductContext } from "../contexts/ProductContextProvider";
 import NewProducts from "../components/Home/NewProducts";
-import Electronics from "../components/Electronics";
-import MensCollection from "../components/MensCollection";
-import WomensCollection from "../components/WomensCollection";
+import LaptopsCollections from "../components/LaptopsCollections";
+import CustomeBuilds from "../components/CustomeBuilds";
+import MonitorsCollection from "../components/MonitorsCollection";
+import DesktopsCollection from "../components/DesktopsCollection";
 
 const Home = () => {
-    const {  womenClothing } = useContext(ProductContext)
+   
 
     return (
         <>
@@ -32,9 +29,11 @@ const Home = () => {
                     <img src={zip} alt="" /> <div className="w-[2px] h-3 bg-slate-500"></div> <h2>own it now, up to 6 months interest free learn more</h2>
                 </div>
             </section>
-            <Electronics></Electronics>
-            <MensCollection></MensCollection>    
-            <WomensCollection> </WomensCollection>
+            <CustomeBuilds/>
+            <LaptopsCollections/>
+            <DesktopsCollection/>
+            <MonitorsCollection/>
+           
             <div className="px-6">
                 <Partnar></Partnar>
             </div>

@@ -43,7 +43,7 @@ const Products01 = ({item}) => {
                                 <span className=" text-lg font-semibold">${price}</span>
                             </div>
                             <div className='relative overflow-hidden bottom-8 left-0 right-0  opacity-0 transition-all duration-500 invisible   group-hover:bottom-0 group-hover:opacity-100  group-hover:visible'>
-                                <button className=" rounded-full border-2 border-[#0156FF] text-[#0156FF] flex gap-2 items-center justify-center py-2"><BsCart /> add To Cart</button>
+                                <button className=" rounded-full border-2 border-[#0156FF] text-[#0156FF] flex gap-2 items-center justify-center py-2 px-3"><BsCart /> add To Cart</button>
                             </div>
 
                         </div>

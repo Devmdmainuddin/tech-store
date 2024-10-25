@@ -11,29 +11,29 @@ import SingleCards from './SingleCards';
 // };
 
 
-function Items({ currentItems , activeMulti }) {
+function Items({ currentItems, activeMulti }) {
 
 
     return (
         <>
-            {currentItems && 
-                currentItems.map((item,key) => (
-                   
+            {currentItems &&
+                currentItems.map((item, key) => (
+
                     <div key={key}>
-                    {activeMulti ? (
-                        <Products product={item}></Products>
-                    ) : (
-                        <SingleCards product={item}></SingleCards>
-                    )}
-                </div>
+                        {activeMulti ? (
+                            <Products product={item}></Products>
+                        ) : (
+                            <SingleCards product={item}></SingleCards>
+                        )}
+                    </div>
                 ))}
         </>
     );
 }
 
-function PaginatedItems({ itemsPerPage, item ,activeMulti ,setRangeData    }) {
- 
-  
+function PaginatedItems({ itemsPerPage, item, activeMulti, setRangeData }) {
+
+
     const items = item;
 
     const [itemOffset, setItemOffset] = useState(0);
@@ -41,7 +41,7 @@ function PaginatedItems({ itemsPerPage, item ,activeMulti ,setRangeData    }) {
     // console.log(`Loading items from ${itemOffset} to ${endOffset}`);
     const currentItems = items?.slice(itemOffset, endOffset);
     const pageCount = Math.ceil(items?.length / itemsPerPage);
-   
+
     const handlePageClick = (event) => {
         const newOffset = (event.selected * itemsPerPage) % items?.length;
         setItemOffset(newOffset);
@@ -74,7 +74,7 @@ function PaginatedItems({ itemsPerPage, item ,activeMulti ,setRangeData    }) {
 
                     activeClassName="active text-white bg-[#262626]"
                 />
-<p className='lg:text-xs lg:leading-7 leading-5 text-[#767676]'>
+                <p className='lg:text-xs lg:leading-7 leading-5 text-[#767676]'>
                     {/* {getProductRangeText(itemOffset, endOffset, items?.length)} */}
                 </p>
                 {/* <p className='lg:text-xs lg:leading-7 leading-5 text-[#767676]'>Products from {itemOffset + 1} to {endOffset > items?.length ? items?.length : endOffset} of {items?.length}</p> */}

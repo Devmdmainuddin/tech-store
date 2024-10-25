@@ -5,7 +5,7 @@ import { ImStarHalf } from "react-icons/im";
 import { MdDone } from "react-icons/md";
 import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
-
+import PropTypes from 'prop-types';
 
 const Products = ({ product }) => {
     return (
@@ -16,8 +16,8 @@ const Products = ({ product }) => {
                     <div className='relative overflow-hidden'>
                         <img className="block w-[150px] h-[150px] mx-auto  mb-8 object-contain transition-all duration-300 group-hover:scale-110" src={product.image} alt="" />
                         <div className='absolute top-4 -right-10 group-hover:right-0 transition-all duration-500 opacity-0 invisible group-hover:opacity-100  group-hover:visible'>
-                            <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full' />
-                            <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] rounded-full mt-1' />
+                            <FaRegHeart className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] hover:border-[#0156FF] hover:text-[#0156FF] transition-all duration-300 rounded-full' />
+                            <FiBarChart2 className='p-1 border border-[#A2A6B0] text-3xl text-[#A2A6B0] hover:border-[#0156FF] hover:text-[#0156FF] transition-all duration-300 rounded-full mt-1' />
                         </div>
 
                     </div>
@@ -36,13 +36,13 @@ const Products = ({ product }) => {
 
                         </div>
 
-                        <h6 className="font-normal text-sm  mt-2 mb-5">{product.title}</h6>
+                      <Link to={`/products/${product.id}`}> <h6 className="font-normal text-sm  mt-2 mb-5">{product.title}</h6> </Link> 
                         <div className='flex flex-col mb-2'>
                             <span className="font-bold  line-through text-[#666666]">{product.discount_price ? product.discount_price : ''}</span>
                             <span className=" text-lg font-semibold">${product.price} </span>
                         </div>
                         <div className='relative overflow-hidden bottom-8 left-0 right-0  opacity-0 transition-all duration-500 invisible   group-hover:bottom-0 group-hover:opacity-100  group-hover:visible'>
-                            <Link className=" rounded-full border-2 border-[#0156FF] text-[#0156FF] flex gap-2 items-center justify-center py-2"><BsCart /> add To Cart</Link>
+                            <button className=" rounded-full border-2 border-[#0156FF] text-[#0156FF] flex gap-2 items-center justify-center py-2 px-3"><BsCart /> add To Cart</button>
                         </div>
 
                     </div>
@@ -52,5 +52,9 @@ const Products = ({ product }) => {
         </div>
     );
 };
-
+Products.propTypes = {
+    
+    product: PropTypes.object,
+}
 export default Products;
+

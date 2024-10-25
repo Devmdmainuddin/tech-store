@@ -8,30 +8,38 @@ import PropTypes from 'prop-types';
 export const ProductContext = createContext();
 const ProductContextProvider = ({ children }) => {
     const [products, setProduct] = useState([]);
-    const [menClothing, setMenClothing] = useState([]);
-    const [womenClothing, setWomenClothing] = useState([]);
-    const [electronics, setElectronics] = useState([]);
-    // const axiosCommon = useAxiosCommon()
+    const [categorys, setCategory] = useState([]);
+    const [mobiles, setMobile] = useState([]);
+    const [laptops, setLaptop] = useState([]);
+    const [desktops, setDesktop] = useState([]);
+    const [monitors, setMonitor] = useState([]);
+    const [customBuilds, setCustomBuilds] = useState([]);
 
-    //  console.log(filteredProducts);
-    // const filteredProducts = products.filter(product => product.category === "men's clothing" || products.category === "women's clothing")
     useEffect(() => {
-        // fetch('http://localhost:4000/')
-        fetch('https://fakestoreapi.com/products')
+       
+        // fetch('https://fakestoreapi.com/products')
         // fetch('https://dummyjson.com/products')
+        fetch('fakedata.json')
             .then((res) => res.json())
             .then((data) => {
                 setProduct(data)
-                const menClothings = [...data].filter(p => p.category == "men's clothing")
-                setMenClothing(menClothings)
-                const womenClothings = [...data].filter(p => p.category == "women's clothing")
-                setWomenClothing(womenClothings)
-                const electronic = [...data].filter(p => p.category == 'electronics')
-                setElectronics(electronic)
+                const mobile = [...data].filter(p => p.category == "mobile")
+                setMobile(mobile)
+                const laptoop = [...data].filter(p => p.category == 'laptop')
+                setLaptop(laptoop)
+                const desktop = [...data].filter(p => p.category == "desktop")
+                setDesktop(desktop)
+                const monitor = [...data].filter(p => p.category == 'monitor')
+                setMonitor(monitor)
+                const builds = [...data].filter(p => p.category == 'custom builds')
+                setCustomBuilds(builds)
+                setCategory([... new Set(data?.map(item => item.category))])
+
             })
     }, [])
+    console.log(categorys);
     return (
-        <ProductContext.Provider value={{ products,electronics,menClothing,womenClothing }}> {children} </ProductContext.Provider>
+        <ProductContext.Provider value={{ products,categorys,mobiles,laptops, desktops, monitors,customBuilds }}> {children} </ProductContext.Provider>
     );
 };
 ProductContextProvider.propTypes = {

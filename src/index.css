@@ -4,5 +4,5 @@
 
 .react-tabs__tab--selected{
     color:black !important;
-    border-bottom: 3px solid black !important;
+    border-bottom: 3px solid #0156FF !important;
 }

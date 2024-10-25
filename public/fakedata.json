@@ -1,243 +1,668 @@
 [
     {
-      "id": 1,
-      "category": "mobile",
-      "brand": "TechBrand",
-      "model": "X200",
-      "title": "TechBrand X200 Smartphone",
-      "description": "A high-performance smartphone with a sleek design.",
-      "image": "https://example.com/images/techbrand_x200.jpg",
-      "price": 699.99,
-      "discount_price": 649.99,
-      "status": "available",
-      "rating": 4.5,
-      "reviews": [
-        "Excellent battery life and camera quality.",
-        "Great performance but the storage could be better."
-      ],
-      "specs": {
-        "screen_size": "6.5 inches",
-        "memory": "8 GB",
-        "storage": "128 GB",
-        "battery": "4000 mAh",
-        "camera": "12 MP"
-      }
+        "id": 19,
+        "category": "monitor",
+        "subcategory": "business",
+        "brand": "DisplayTech",
+        "model": "Display 27",
+        "title": "DisplayTech Display 27 Monitor",
+        "description": "A professional monitor for design work.",
+        "image": "/m.jpg",
+        "price": 499.99,
+        "discount_price": 479.99,
+        "status": "available",
+        "rating": 4.5,
+        "reviews": [
+            "Excellent color reproduction.",
+            "Perfect for photo editing."
+        ],
+        "specs": {
+            "screen_size": "27 inches",
+            "resolution": "2560x1440",
+            "refresh_rate": "60 Hz",
+            "panel_type": "IPS",
+            "ports": "HDMI, DisplayPort, USB-C"
+        },
+        "colors": ["Black", "Silver"],
+        "createdAt": "2024-10-19T10:00:00Z"
     },
     {
-      "id": 2,
-      "category": "laptop",
-      "brand": "ComputePro",
-      "model": "UltraBook 15",
-      "title": "ComputePro UltraBook 15",
-      "description": "A powerful laptop with top-notch performance for all your needs.",
-      "image": "https://example.com/images/computepro_ultrabook15.jpg",
-      "price": 1299.99,
-      "discount_price": 1199.99,
-      "status": "available",
-      "rating": 4.7,
-      "reviews": [
-        "Outstanding performance and build quality.",
-        "Sleek design and long battery life."
-      ],
-      "specs": {
+        "id": 9,
+        "category": "laptop",
+        "subcategory": "gaming",
+        "brand": "HyperLaptop",
+        "model": "Hyper X17",
+        "title": "HyperLaptop Hyper X17 Gaming Laptop",
+        "description": "A high-performance gaming laptop for serious gamers.",
+        "image": "/l02.jpg",
+        "price": 1999.99,
+        "discount_price": 1899.99,
+        "status": "available",
+        "rating": 4.9,
+        "reviews": [
+            "Incredible graphics and performance.",
+            "Perfect for VR gaming."
+        ],
+        "specs": {
+            "screen_size": "17.3 inches",
+            "memory": "32 GB",
+            "storage": "1 TB SSD",
+            "processor": "AMD Ryzen 9",
+            "battery": "5 hours"
+        },
+        "colors": ["Black", "RGB"],
+        "createdAt": "2024-10-09T10:00:00Z"
+    },
+    {
+        "id": 11,
+        "category": "desktop",
+        "subcategory": "gaming",
+        "brand": "DesktopGamer",
+        "model": "Gamer 9000",
+        "title": "DesktopGamer Gamer 9000",
+        "description": "A powerful gaming desktop built for hardcore gamers.",
+        "image": "/d03.jpg",
+        "price": 1999.99,
+        "discount_price": 1899.99,
+        "status": "available",
+        "rating": 4.8,
+        "reviews": [
+            "Unmatched performance.",
+            "Great cooling system."
+        ],
+        "specs": {
+            "memory": "32 GB",
+            "storage": "2 TB SSD",
+            "processor": "Intel i9",
+            "graphics": "NVIDIA RTX 3080",
+            "operating_system": "Windows 11"
+        },
+        "colors": ["Black"],
+        "createdAt": "2024-10-11T10:00:00Z"
+    },
+    {
+        "id": 12,
+        "category": "desktop",
+        "subcategory": "business",
+        "brand": "OfficeDesk",
+        "model": "Office 5000",
+        "title": "OfficeDesk Office 5000",
+        "description": "A reliable desktop for everyday office tasks.",
+        "image": "/d02.jpg",
+        "price": 899.99,
+        "discount_price": 849.99,
+        "status": "available",
+        "rating": 4.3,
+        "reviews": [
+            "Good performance for work applications.",
+            "Quiet operation."
+        ],
+        "specs": {
+            "memory": "16 GB",
+            "storage": "1 TB HDD",
+            "processor": "AMD Ryzen 5",
+            "operating_system": "Windows 10"
+        },
+        "colors": ["White", "Black"],
+        "createdAt": "2024-10-12T10:00:00Z"
+    },
+    {
+        "id": 25,
+        "category": "custom builds",
+        "subcategory": "all-purpose",
+        "title": "Custom All-Purpose PC",
+        "description": "A versatile PC build for everyday use.",
+        "image": "/builds.jpg",
+        "price": 1499.99,
+        "discount_price": 1399.99,
+        "status": "available",
+        "rating": 4.6,
+        "reviews": [
+            "Great for home and office use.",
+            "Solid performance."
+        ],
+        "specs": {
+            "memory": "32 GB",
+            "storage": "1 TB SSD",
+            "processor": "AMD Ryzen 7",
+            "operating_system": "Windows 10"
+        },
+        "colors": ["Black", "White"],
+        "createdAt": "2024-10-25T10:00:00Z"
+    },
+    {
+        "id": 16,
+        "category": "monitor",
+        "subcategory": "gaming",
+        "brand": "HyperScreen",
+        "model": "Hyper 27",
+        "title": "HyperScreen Hyper 27 Gaming Monitor",
+        "description": "A large gaming monitor with vibrant colors.",
+        "image": "/m.jpg",
+        "price": 399.99,
+        "discount_price": 379.99,
+        "status": "available",
+        "rating": 4.6,
+        "reviews": [
+            "Fantastic display quality.",
+            "Perfect for immersive gaming."
+        ],
+        "specs": {
+            "screen_size": "27 inches",
+            "resolution": "2560x1440",
+            "refresh_rate": "165 Hz",
+            "panel_type": "IPS",
+            "ports": "HDMI, DisplayPort"
+        },
+        "colors": ["Black"],
+        "createdAt": "2024-10-16T10:00:00Z"
+    },
+  {
+    "id": 1,
+    "category": "mobile",
+    "subcategory": "smartphone",
+    "brand": "TechBrand",
+    "model": "TechPhone 12",
+    "title": "TechBrand TechPhone 12",
+    "description": "A powerful smartphone with a stunning display and great performance.",
+    "image": "https://example.com/images/techphone12.jpg",
+    "price": 799.99,
+    "discount_price": 749.99,
+    "status": "available",
+    "rating": 4.5,
+    "reviews": [
+        "Excellent battery life and camera.",
+        "Smooth performance."
+    ],
+    "specs": {
+        "screen_size": "6.5 inches",
+        "memory": "128 GB",
+        "storage": "256 GB",
+        "processor": "A14 Bionic",
+        "battery": "20 hours"
+    },
+    "colors": ["Black", "Blue"],
+    "createdAt": "2024-10-01T10:00:00Z"
+},
+{
+    "id": 2,
+    "category": "mobile",
+    "subcategory": "smartphone",
+    "brand": "SmartTech",
+    "model": "SmartPhone 11",
+    "title": "SmartTech SmartPhone 11",
+    "description": "An affordable smartphone with all the essentials.",
+    "image": "https://example.com/images/smartphone11.jpg",
+    "price": 499.99,
+    "discount_price": 479.99,
+    "status": "available",
+    "rating": 4.2,
+    "reviews": [
+        "Great value for the price.",
+        "Good performance for daily tasks."
+    ],
+    "specs": {
+        "screen_size": "6.1 inches",
+        "memory": "64 GB",
+        "storage": "128 GB",
+        "processor": "Snapdragon 888",
+        "battery": "18 hours"
+    },
+    "colors": ["White", "Green"],
+    "createdAt": "2024-10-02T10:00:00Z"
+},
+{
+    "id": 3,
+    "category": "mobile",
+    "subcategory": "feature phone",
+    "brand": "BasicPhone",
+    "model": "Basic 4G",
+    "title": "BasicPhone Basic 4G",
+    "description": "A simple feature phone with 4G connectivity.",
+    "image": "https://example.com/images/basicphone4g.jpg",
+    "price": 99.99,
+    "discount_price": 89.99,
+    "status": "available",
+    "rating": 4.0,
+    "reviews": [
+        "Perfect for calls and texts.",
+        "Great battery life."
+    ],
+    "specs": {
+        "screen_size": "4.5 inches",
+        "memory": "4 GB",
+        "storage": "32 GB",
+        "processor": "Quad-core",
+        "battery": "30 hours"
+    },
+    "colors": ["Black", "Red"],
+    "createdAt": "2024-10-03T10:00:00Z"
+},
+{
+    "id": 4,
+    "category": "mobile",
+    "subcategory": "smartphone",
+    "brand": "PremiumTech",
+    "model": "Premium 10",
+    "title": "PremiumTech Premium 10",
+    "description": "A premium smartphone with cutting-edge technology.",
+    "image": "https://example.com/images/premiumtechpremium10.jpg",
+    "price": 999.99,
+    "discount_price": 949.99,
+    "status": "available",
+    "rating": 4.8,
+    "reviews": [
+        "Exceptional camera quality.",
+        "High performance and fast charging."
+    ],
+    "specs": {
+        "screen_size": "6.7 inches",
+        "memory": "256 GB",
+        "storage": "512 GB",
+        "processor": "Exynos 2100",
+        "battery": "24 hours"
+    },
+    "colors": ["Silver", "Gold"],
+    "createdAt": "2024-10-04T10:00:00Z"
+},
+{
+    "id": 5,
+    "category": "mobile",
+    "subcategory": "smartphone",
+    "brand": "EcoPhone",
+    "model": "EcoSmart 5",
+    "title": "EcoPhone EcoSmart 5",
+    "description": "An eco-friendly smartphone made with sustainable materials.",
+    "image": "https://example.com/images/ecophonesmart5.jpg",
+    "price": 399.99,
+    "discount_price": 379.99,
+    "status": "available",
+    "rating": 4.3,
+    "reviews": [
+        "Good for eco-conscious consumers.",
+        "Solid performance."
+    ],
+    "specs": {
+        "screen_size": "6.2 inches",
+        "memory": "128 GB",
+        "storage": "256 GB",
+        "processor": "MediaTek Dimensity",
+        "battery": "20 hours"
+    },
+    "colors": ["Green", "Black"],
+    "createdAt": "2024-10-05T10:00:00Z"
+},
+{
+    "id": 6,
+    "category": "laptop",
+    "subcategory": "gaming",
+    "brand": "GamerTech",
+    "model": "Gamer X15",
+    "title": "GamerTech Gamer X15 Laptop",
+    "description": "A powerful gaming laptop with high performance.",
+    "image": "/l01.jpg",
+    "price": 1499.99,
+    "discount_price": 1399.99,
+    "status": "available",
+    "rating": 4.7,
+    "reviews": [
+        "Excellent gaming performance.",
+        "Great display and sound quality."
+    ],
+    "specs": {
         "screen_size": "15.6 inches",
+        "memory": "16 GB",
+        "storage": "1 TB SSD",
+        "processor": "Intel i7",
+        "battery": "6 hours"
+    },
+    "colors": ["Black", "Red"],
+    "createdAt": "2024-10-06T10:00:00Z"
+},
+{
+    "id": 7,
+    "category": "laptop",
+    "subcategory": "business",
+    "brand": "OfficeTech",
+    "model": "OfficePro 14",
+    "title": "OfficeTech OfficePro 14 Laptop",
+    "description": "A reliable laptop for business professionals.",
+    "image": "/l02.jpg",
+    "price": 1099.99,
+    "discount_price": 999.99,
+    "status": "available",
+    "rating": 4.4,
+    "reviews": [
+        "Great for work and productivity.",
+        "Good battery life."
+    ],
+    "specs": {
+        "screen_size": "14 inches",
+        "memory": "8 GB",
+        "storage": "512 GB SSD",
+        "processor": "Intel i5",
+        "battery": "10 hours"
+    },
+    "colors": ["Silver", "Black"],
+    "createdAt": "2024-10-07T10:00:00Z"
+},
+{
+    "id": 8,
+    "category": "laptop",
+    "subcategory": "ultrabook",
+    "brand": "SlimTech",
+    "model": "UltraBook 13",
+    "title": "SlimTech UltraBook 13",
+    "description": "A lightweight ultrabook for on-the-go use.",
+    "image": "/l03.jpg",
+    "price": 1299.99,
+    "discount_price": 1249.99,
+    "status": "available",
+    "rating": 4.6,
+    "reviews": [
+        "Very portable and stylish.",
+        "Fast performance."
+    ],
+    "specs": {
+        "screen_size": "13 inches",
         "memory": "16 GB",
         "storage": "512 GB SSD",
         "processor": "Intel i7",
-        "battery": "10 hours"
-      }
+        "battery": "12 hours"
     },
-    {
-      "id": 3,
-      "category": "desktop",
-      "brand": "WorkStation",
-      "model": "DeskPro",
-      "title": "WorkStation DeskPro Desktop",
-      "description": "A reliable desktop for professional and home use.",
-      "image": "https://example.com/images/workstation_deskpro.jpg",
-      "price": 899.99,
-      "discount_price": 849.99,
-      "status": "out of stock",
-      "rating": 4.3,
-      "reviews": [
-        "Great value for the price.",
-        "Solid performance, but the design is a bit bulky."
-      ],
-      "specs": {
+    "colors": ["Rose Gold", "Silver"],
+    "createdAt": "2024-10-08T10:00:00Z"
+},
+
+{
+    "id": 10,
+    "category": "laptop",
+    "subcategory": "business",
+    "brand": "Enterprise",
+    "model": "BusinessPro 15",
+    "title": "Enterprise BusinessPro 15 Laptop",
+    "description": "A business laptop with top-notch performance.",
+    "image": "/l01.jpg",
+    "price": 1399.99,
+    "discount_price": 1349.99,
+    "status": "available",
+    "rating": 4.5,
+    "reviews": [
+        "Great for meetings and presentations.",
+        "Reliable performance."
+    ],
+    "specs": {
+        "screen_size": "15 inches",
+        "memory": "16 GB",
+        "storage": "1 TB SSD",
+        "processor": "Intel i7",
+        "battery": "8 hours"
+    },
+    "colors": ["Black", "Grey"],
+    "createdAt": "2024-10-10T10:00:00Z"
+},
+
+{
+    "id": 13,
+    "category": "desktop",
+    "subcategory": "all-in-one",
+    "brand": "AllInOneTech",
+    "model": "AIO 24",
+    "title": "AllInOneTech AIO 24",
+    "description": "An all-in-one desktop solution for home and office.",
+    "image": "/d03.jpg",
+    "price": 1099.99,
+    "discount_price": 1049.99,
+    "status": "available",
+    "rating": 4.4,
+    "reviews": [
+        "Saves space and looks great.",
+        "Good performance for all tasks."
+    ],
+    "specs": {
+        "memory": "16 GB",
+        "storage": "512 GB SSD",
+        "processor": "Intel i5",
+        "operating_system": "Windows 10"
+    },
+    "colors": ["Black", "Silver"],
+    "createdAt": "2024-10-13T10:00:00Z"
+},
+{
+    "id": 14,
+    "category": "desktop",
+    "subcategory": "gaming",
+    "brand": "ExtremeGaming",
+    "model": "Xtreme Pro",
+    "title": "ExtremeGaming Xtreme Pro Desktop",
+    "description": "A high-end gaming desktop with top-tier specs.",
+    "image": "/d02.jpg",
+    "price": 2999.99,
+    "discount_price": 2899.99,
+    "status": "available",
+    "rating": 4.9,
+    "reviews": [
+        "The best gaming experience I've ever had.",
+        "Incredible graphics and speed."
+    ],
+    "specs": {
+        "memory": "64 GB",
+        "storage": "2 TB SSD + 4 TB HDD",
+        "processor": "Intel i9",
+        "graphics": "NVIDIA RTX 3090",
+        "operating_system": "Windows 11"
+    },
+    "colors": ["Black", "RGB"],
+    "createdAt": "2024-10-14T10:00:00Z"
+},
+{
+    "id": 15,
+    "category": "desktop",
+    "subcategory": "business",
+    "brand": "WorkStation",
+    "model": "WS 3000",
+    "title": "WorkStation WS 3000",
+    "description": "A desktop optimized for professional work.",
+    "image": "/d01.png",
+    "price": 1499.99,
+    "discount_price": 1399.99,
+    "status": "available",
+    "rating": 4.5,
+    "reviews": [
+        "Perfect for graphic design and video editing.",
+        "Very reliable and fast."
+    ],
+    "specs": {
+        "memory": "32 GB",
+        "storage": "1 TB SSD",
+        "processor": "AMD Ryzen 7",
+        "graphics": "NVIDIA RTX 3070",
+        "operating_system": "Windows 10"
+    },
+    "colors": ["Grey", "Black"],
+    "createdAt": "2024-10-15T10:00:00Z"
+},
+
+{
+    "id": 17,
+    "category": "monitor",
+    "subcategory": "business",
+    "brand": "WorkScreen",
+    "model": "Work 24",
+    "title": "WorkScreen Work 24 Monitor",
+    "description": "A business monitor designed for productivity.",
+    "image": "/m2.jpg",
+    "price": 249.99,
+    "discount_price": 229.99,
+    "status": "available",
+    "rating": 4.4,
+    "reviews": [
+        "Great for multitasking.",
+        "Good color accuracy."
+    ],
+    "specs": {
+        "screen_size": "24 inches",
+        "resolution": "1920x1080",
+        "refresh_rate": "75 Hz",
+        "panel_type": "IPS",
+        "ports": "HDMI, VGA"
+    },
+    "colors": ["Black"],
+    "createdAt": "2024-10-17T10:00:00Z"
+},
+{
+    "id": 18,
+    "category": "monitor",
+    "subcategory": "gaming",
+    "brand": "FastScreen",
+    "model": "Speedy 24",
+    "title": "FastScreen Speedy 24 Gaming Monitor",
+    "description": "A compact gaming monitor with fast refresh rates.",
+    "image": "/m2.jpg",
+    "price": 299.99,
+    "discount_price": 279.99,
+    "status": "available",
+    "rating": 4.4,
+    "reviews": [
+        "Great for casual gaming.",
+        "Good value for the price."
+    ],
+    "specs": {
+        "screen_size": "24 inches",
+        "resolution": "1920x1080",
+        "refresh_rate": "144 Hz",
+        "panel_type": "TN",
+        "ports": "HDMI, DisplayPort"
+    },
+    "colors": ["Black", "Red"],
+    "createdAt": "2024-10-18T10:00:00Z"
+},
+
+{
+    "id": 20,
+    "category": "monitor",
+    "subcategory": "ultra-wide",
+    "brand": "UltraView",
+    "model": "Ultra 34",
+    "title": "UltraView Ultra 34 Monitor",
+    "description": "An ultra-wide monitor for an immersive experience.",
+    "image": "/m2.jpg",
+    "price": 799.99,
+    "discount_price": 749.99,
+    "status": "available",
+    "rating": 4.7,
+    "reviews": [
+        "Incredible viewing experience.",
+        "Perfect for gaming and work."
+    ],
+    "specs": {
+        "screen_size": "34 inches",
+        "resolution": "3440x1440",
+        "refresh_rate": "100 Hz",
+        "panel_type": "VA",
+        "ports": "HDMI, DisplayPort"
+    },
+    "colors": ["Black"],
+    "createdAt": "2024-10-20T10:00:00Z"
+},
+{
+    "id": 21,
+    "category": "custom builds",
+    "subcategory": "gaming",
+    "title": "Custom Gaming PC",
+    "description": "A custom-built gaming PC with high-end specs.",
+    "image": "/c01.jpg",
+    "price": 2499.99,
+    "discount_price": 2399.99,
+    "status": "available",
+    "rating": 4.9,
+    "reviews": [
+        "Best gaming experience I've ever had.",
+        "Highly recommend this build."
+    ],
+    "specs": {
+        "memory": "32 GB",
+        "storage": "2 TB SSD",
+        "processor": "Intel i9",
+        "graphics": "NVIDIA RTX 3080",
+        "operating_system": "Windows 11"
+    },
+    "colors": ["Black"],
+    "createdAt": "2024-10-21T10:00:00Z"
+},
+{
+    "id": 22,
+    "category": "custom builds",
+    "subcategory": "business",
+    "title": "Custom Office PC",
+    "description": "A custom-built PC for office work.",
+    "image": "/c02.jpg",
+    "price": 1099.99,
+    "discount_price": 1049.99,
+    "status": "available",
+    "rating": 4.5,
+    "reviews": [
+        "Great for productivity tasks.",
+        "Reliable and fast."
+    ],
+    "specs": {
         "memory": "16 GB",
         "storage": "1 TB HDD",
         "processor": "AMD Ryzen 5",
-        "graphics": "NVIDIA GTX 1660",
         "operating_system": "Windows 10"
-      }
     },
-    {
-      "id": 4,
-      "category": "monitor",
-      "brand": "ViewMaster",
-      "model": "UltraWide 27",
-      "title": "ViewMaster UltraWide 27 Monitor",
-      "description": "A stunning ultra-wide monitor with vibrant colors.",
-      "image": "https://example.com/images/viewmaster_ultrawide27.jpg",
-      "price": 299.99,
-      "discount_price": 279.99,
-      "status": "available",
-      "rating": 4.6,
-      "reviews": [
-        "Excellent color accuracy and wide viewing angles.",
-        "Perfect for multitasking and gaming."
-      ],
-      "specs": {
-        "screen_size": "27 inches",
-        "resolution": "2560x1440",
-        "refresh_rate": "144 Hz",
-        "panel_type": "IPS",
-        "ports": "HDMI, DisplayPort"
-      }
-    },
-    {
-      "id": 5,
-      "category": "mobile",
-      "brand": "PhoneX",
-      "model": "ProMax",
-      "title": "PhoneX ProMax Smartphone",
-      "description": "A premium smartphone with advanced features.",
-      "image": "https://example.com/images/phonex_promax.jpg",
-      "price": 999.99,
-      "discount_price": 949.99,
-      "status": "available",
-      "rating": 4.8,
-      "reviews": [
-        "Top-notch camera and display quality.",
-        "Fast performance with a premium feel."
-      ],
-      "specs": {
-        "screen_size": "6.7 inches",
-        "memory": "12 GB",
-        "storage": "256 GB",
-        "battery": "4500 mAh",
-        "camera": "48 MP"
-      }
-    },
-    {
-      "id": 6,
-      "category": "laptop",
-      "brand": "LapTopia",
-      "model": "Gaming 17",
-      "title": "LapTopia Gaming 17",
-      "description": "A high-performance gaming laptop with a large display.",
-      "image": "https://example.com/images/laptopia_gaming17.jpg",
-      "price": 1499.99,
-      "discount_price": 1399.99,
-      "status": "available",
-      "rating": 4.7,
-      "reviews": [
-        "Amazing graphics and performance for gaming.",
-        "Large screen and excellent cooling system."
-      ],
-      "specs": {
-        "screen_size": "17.3 inches",
-        "memory": "32 GB",
-        "storage": "1 TB SSD",
-        "processor": "Intel i9",
-        "battery": "8 hours"
-      }
-    },
-    {
-      "id": 7,
-      "category": "desktop",
-      "brand": "PowerPC",
-      "model": "GamerX",
-      "title": "PowerPC GamerX Desktop",
-      "description": "A powerful desktop for gaming enthusiasts.",
-      "image": "https://example.com/images/powerpc_gamerx.jpg",
-      "price": 1299.99,
-      "discount_price": 1249.99,
-      "status": "available",
-      "rating": 4.9,
-      "reviews": [
-        "Exceptional gaming performance.",
-        "High-end components with a sleek design."
-      ],
-      "specs": {
-        "memory": "32 GB",
+    "colors": ["Grey"],
+    "createdAt": "2024-10-22T10:00:00Z"
+},
+{
+    "id": 23,
+    "category": "custom builds",
+    "subcategory": "gaming",
+    "title": "Custom VR Gaming PC",
+    "description": "A powerful custom build for VR gaming.",
+    "image": "/c03.jpg",
+    "price": 2999.99,
+    "discount_price": 2899.99,
+    "status": "available",
+    "rating": 4.8,
+    "reviews": [
+        "Incredible VR performance.",
+        "Best experience for virtual reality."
+    ],
+    "specs": {
+        "memory": "64 GB",
         "storage": "2 TB SSD",
-        "processor": "AMD Ryzen 7",
-        "graphics": "NVIDIA RTX 3070",
+        "processor": "AMD Ryzen 9",
+        "graphics": "NVIDIA RTX 3090",
         "operating_system": "Windows 11"
-      }
     },
-    {
-      "id": 8,
-      "category": "monitor",
-      "brand": "ScreenMaster",
-      "model": "4K 32",
-      "title": "ScreenMaster 4K 32 Monitor",
-      "description": "A large 4K monitor for immersive viewing experiences.",
-      "image": "https://example.com/images/screenmaster_4k32.jpg",
-      "price": 499.99,
-      "discount_price": 459.99,
-      "status": "available",
-      "rating": 4.5,
-      "reviews": [
-        "Stunning 4K resolution and great color accuracy.",
-        "Perfect for both work and entertainment."
-      ],
-      "specs": {
-        "screen_size": "32 inches",
-        "resolution": "3840x2160",
-        "refresh_rate": "60 Hz",
-        "panel_type": "VA",
-        "ports": "HDMI, DisplayPort, USB-C"
-      }
+    "colors": ["Black"],
+    "createdAt": "2024-10-23T10:00:00Z"
+},
+{
+    "id": 24,
+    "category": "custom builds",
+    "subcategory": "business",
+    "title": "Custom Workstation PC",
+    "description": "A custom workstation for heavy tasks.",
+    "image": "/c04.jpg",
+    "price": 3499.99,
+    "discount_price": 3399.99,
+    "status": "available",
+    "rating": 4.7,
+    "reviews": [
+        "Perfect for graphic design and 3D modeling.",
+        "Highly recommend for professionals."
+    ],
+    "specs": {
+        "memory": "128 GB",
+        "storage": "4 TB SSD",
+        "processor": "Intel Xeon",
+        "graphics": "NVIDIA RTX A6000",
+        "operating_system": "Windows 11"
     },
-    {
-      "id": 9,
-      "category": "mobile",
-      "brand": "SmartPhone",
-      "model": "Elite",
-      "title": "SmartPhone Elite",
-      "description": "A feature-rich smartphone with a sleek design.",
-      "image": "https://example.com/images/smartphone_elite.jpg",
-      "price": 799.99,
-      "discount_price": 749.99,
-      "status": "available",
-      "rating": 4.4,
-      "reviews": [
-        "Good value for the features provided.",
-        "Sleek design and responsive interface."
-      ],
-      "specs": {
-        "screen_size": "6.3 inches",
-        "memory": "8 GB",
-        "storage": "128 GB",
-        "battery": "3800 mAh",
-        "camera": "16 MP"
-      }
-    },
-    {
-      "id": 10,
-      "category": "laptop",
-      "brand": "UltraTech",
-      "model": "SlimBook",
-      "title": "UltraTech SlimBook",
-      "description": "A slim and lightweight laptop for on-the-go productivity.",
-      "image": "https://example.com/images/ultratech_slimbook.jpg",
-      "price": 1099.99,
-      "discount_price": 999.99,
-      "status": "available",
-      "rating": 4.6,
-      "reviews": [
-        "Great portability and battery life.",
-        "Fast performance with a compact design."
-      ],
-      "specs": {
-        "screen_size": "13.3 inches",
-        "memory": "8 GB",
-        "storage": "256 GB SSD",
-        "processor": "Intel i5",
-        "battery": "12 hours"
-      }
-    }
-  ]
-  
+    "colors": ["Black"],
+    "createdAt": "2024-10-24T10:00:00Z"
+}
+
+]

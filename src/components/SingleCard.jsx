@@ -6,7 +6,7 @@ import { FiBarChart2 } from 'react-icons/fi';
 import { MdDone } from 'react-icons/md';
 import { useEffect, useRef,  } from "react";
 import { register } from "swiper/element/bundle";
-import { useGetproductsQuery } from '../future/productApi';
+import { useGetproductsQuery } from '../featured/productApi';
 
 register();
 
